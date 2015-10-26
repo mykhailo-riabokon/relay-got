@@ -1,0 +1,28 @@
+{
+  "name": "relay-got",
+  "version": "0.0.1",
+  "description": "Relay example in Game of Thrones subject",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikhail-riabokon/relay-got.git"
+  },
+  "keywords": [
+    "Relay",
+    "GraphQL",
+    "express"
+  ],
+  "author": "Mikhail Riabokon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikhail-riabokon/relay-got/issues"
+  },
+  "homepage": "https://github.com/mikhail-riabokon/relay-got#readme",
+  "dependencies": {
+    "babel": "^5.8.29",
+    "express": "^4.13.3"
+  }
+}
