@@ -3,14 +3,23 @@
  */
 import express from 'express';
 import path from 'path';
-import {port} from '../../config.js'
+import {port, __HOT__} from '../../config.js'
 import {getJsPath} from './utils.js';
 
 const app = express();
 
+if (__HOT__) {
+  let webpackDevMiddleware = require('./middlewares/webpackDev');
+  let webpackHotMiddleware = require('./middlewares/webpackHot');
+
+  app.use(webpackDevMiddleware.default);
+  app.use(webpackHotMiddleware);
+}
+
 app.set('views', path.resolve(__dirname, 'views'));
 app.set('view engine', 'jade');
 
+app.use('/assets', express.static('assets'));
 app.get('*', (req, res) => {
   res.render('index', {
     jsPath: getJsPath()

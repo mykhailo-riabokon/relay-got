@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "webpack": "NODE_ENV=development babel-node ./scripts/webpack/index.js",
-    "dev": "NODE_ENV=development node ./index.js"
+    "dev": "HOT=1 NODE_ENV=development node ./index.js"
   },
   "repository": {
     "type": "git",
@@ -30,6 +30,14 @@
     "jade": "^1.11.0",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
-    "webpack": "^1.12.2"
+    "webpack": "^1.12.2",
+    "webpack-hot-middleware": "^2.4.1"
+  },
+  "devDependencies": {
+    "babel-plugin-react-transform": "^1.1.1",
+    "react-tools": "^0.10.0",
+    "react-transform": "0.0.3",
+    "react-transform-hmr": "^1.0.1",
+    "webpack-dev-middleware": "^1.2.0"
   }
 }

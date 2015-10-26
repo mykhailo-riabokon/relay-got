@@ -30,12 +30,11 @@ export function getLoaders() {
         clientSourcePath
       ],
       query: {
-        stage: 0
-        //,
-        //plugins: [
-        //  path.resolve(__dirname, 'plugins', 'babelRelay.js'),
-        //  "object-assign"
-        //]
+        stage: 0,
+        plugins: [
+          //path.resolve(__dirname, 'plugins', 'babelRelay.js'),
+          //"object-assign"
+        ]
       }
     }
   ];
@@ -92,4 +91,4 @@ export function getPlugins() {
   );
 
   return result;
-};
+}
