@@ -3,6 +3,7 @@
  */
 import express from 'express';
 import path from 'path';
+import graphql from './middlewares/graphql';
 import {port, __HOT__} from '../../config.js'
 import {getJsPath} from './utils.js';
 
@@ -19,6 +20,7 @@ if (__HOT__) {
 app.set('views', path.resolve(__dirname, 'views'));
 app.set('view engine', 'jade');
 
+app.use('/graphql', graphql);
 app.use('/assets', express.static('assets'));
 app.get('*', (req, res) => {
   res.render('index', {
