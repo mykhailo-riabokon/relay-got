@@ -17,37 +17,44 @@ export default function () {
         {
           name: 'Eddard',
           isDead: true,
-          title: 'lord'
+          title: 'lord',
+          family: 'Stark'
         },
         {
           name: 'Catelyn',
           isDead: true,
-          title: 'lady'
+          title: 'lady',
+          family: 'Stark'
         },
         {
           name: 'Robb',
           isDead: true,
-          title: 'lord'
+          title: 'lord',
+          family: 'Stark'
         },
         {
           name: 'Sansa',
           isDead: false,
-          title: 'princess'
+          title: 'princess',
+          family: 'Stark'
         },
         {
           name: 'Arya',
           isDead: false,
-          title: 'princess'
+          title: 'princess',
+          family: 'Stark'
         },
         {
           name: 'Bran',
           isDead: false,
-          title: 'prince'
+          title: 'prince',
+          family: 'Stark'
         },
         {
           name: 'Rickon',
           isDead: false,
-          title: 'prince'
+          title: 'prince',
+          family: 'Stark'
         }
       ]
     },
@@ -59,17 +66,20 @@ export default function () {
         {
           name: 'John',
           isDead: true,
-          title: 'lord'
+          title: 'lord',
+          family: 'Arryn'
         },
         {
           name: 'Lysa',
           isDead: false,
-          title: 'lady'
+          title: 'lady',
+          family: 'Arryn'
         },
         {
           name: 'Robin',
           isDead: false,
-          title: 'lord'
+          title: 'lord',
+          family: 'Arryn'
         }
       ]
     },
@@ -81,30 +91,36 @@ export default function () {
         {
           name: 'Hoster',
           isDead: true,
-          title: 'lord'
+          title: 'lord',
+          family: 'Tully'
         },
         {
           name: 'Manisa',
           isDead: true,
-          title: 'lady'
+          title: 'lady',
+          family: 'Tully'
         },
         {
           name: 'Catelyn',
+          family: 'Tully',
           husbandHouse: 'Stark'
         },
         {
           name: 'Lysa',
+          family: 'Tully',
           husbandHouse: 'Stark'
         },
         {
           name: 'Edmure',
           isDead: false,
-          title: 'lord'
+          title: 'lord',
+          family: 'Tully'
         },
         {
           name: 'Brynden',
           isDead: false,
-          title: 'ser'
+          title: 'ser',
+          family: 'Tully'
         }
       ]
     },
@@ -116,26 +132,31 @@ export default function () {
         {
           name: 'Tywin',
           isDead: true,
-          title: 'lord'
+          title: 'lord',
+          family: 'Lannister'
         },
         {
           name: 'Joanna',
           isDead: true,
-          title: 'lady'
+          title: 'lady',
+          family: 'Lannister'
         },
         {
           name: 'Cersei',
-          husbandHouse: 'Baratheon'
+          husbandHouse: 'Baratheon',
+          family: 'Lannister'
         },
         {
           name: 'Jaime',
           isDead: false,
-          title: 'ser'
+          title: 'ser',
+          family: 'Lannister'
         },
         {
           name: 'Tyrion',
           isDead: false,
-          title: null
+          title: null,
+          family: 'Lannister'
         }
       ]
     },
@@ -147,31 +168,37 @@ export default function () {
         {
           name: 'Balon',
           isDead: false,
-          title: 'lord'
+          title: 'lord',
+          family: 'Greyjoy'
         },
         {
           name: 'Alannys',
-          husbandHouse: 'Harlaw'
+          husbandHouse: 'Harlaw',
+          family: 'Greyjoy'
         },
         {
           name: 'Rodrik',
           isDead: true,
-          title: null
+          title: null,
+          family: 'Greyjoy'
         },
         {
           name: 'Maron',
           isDead: true,
-          title: null
+          title: null,
+          family: 'Greyjoy'
         },
         {
           name: 'Yara',
           isDead: false,
-          title: null
+          title: null,
+          family: 'Greyjoy'
         },
         {
           name: 'Theon',
           isDead: false,
-          title: null
+          title: null,
+          family: 'Greyjoy'
         }
       ]
     },
@@ -183,37 +210,44 @@ export default function () {
         {
           name: 'Robert',
           isDead: true,
-          status: 'king'
+          status: 'king',
+          family: 'Baratheon'
         },
         {
           name: 'Cersei',
           isDead: false,
-          status: 'queen'
+          status: 'queen',
+          family: 'Baratheon'
         },
         {
           name: 'Joffrey',
           isDead: true,
-          status: 'king'
+          status: 'king',
+          family: 'Baratheon'
         },
         {
           name: 'Myrcella',
           isDead: true,
-          status: 'princess'
+          status: 'princess',
+          family: 'Baratheon'
         },
         {
           name: 'Tommen',
           isDead: false,
-          status: 'king'
+          status: 'king',
+          family: 'Baratheon'
         },
         {
           name: 'Stannis',
           isDead: true,
-          status: 'lord'
+          status: 'lord',
+          family: 'Baratheon'
         },
         {
           name: 'Renly',
           isDead: true,
-          status: 'lord'
+          status: 'lord',
+          family: 'Baratheon'
         }
       ]
     }
