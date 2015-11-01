@@ -1,0 +1,27 @@
+@region-height: 1000px;
+@main-header-height: 50px;
+
+.westeros {
+  position: relative;
+  height: @region-height + @main-header-height;
+  .header {
+    text-align: center;
+    color: #fff;
+    height: @main-header-height;
+  }
+  .regions {
+    background-image: url('../../../assets/images/map.jpg');
+    margin: 0 auto;
+    height: 1000px;
+    width: 800px;
+    background-size: cover;
+    box-shadow: 0 0 100px 50px rgba(0,0,0, 0.8);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    .region {
+      position: absolute;
+      background-color: red;
+    }
+  }
+}

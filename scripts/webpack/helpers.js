@@ -36,6 +36,14 @@ export function getLoaders() {
           //"object-assign"
         ]
       }
+    },
+    {
+      test: /\.less$/,
+      loader: "style!css!less"
+    },
+    {
+      test: /\.(png|jpg|ttf)$/,
+      loader: 'url-loader?limit=8192'
     }
   ];
 
