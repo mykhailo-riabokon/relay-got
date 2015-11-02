@@ -11,11 +11,7 @@ let regions = [
     rulers: 'House Stark',
     capital: 'Winterfell',
     religion: 'The Old Gods of the Forest',
-    bastardSurname: 'Snow',
-    cords: {
-      x: 0,
-      y: 100
-    }
+    bastardSurname: 'Snow'
   },
   {
     name: 'The Vale of Arryn',
@@ -38,8 +34,13 @@ class Region extends Component {
 
   };
 
+  get className() {
+    let name = this.props.name.replace(/\W/g, '');
+
+    return name.substr(0, 1).toLowerCase() + name.substr(1);
+  }
   render() {
-    return <h1 className="region">region</h1>
+    return <h1 className="region" className={this.className}>region</h1>
   }
 }
 
