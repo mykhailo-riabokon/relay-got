@@ -1,4 +1,4 @@
-@region-height: 1000px;
+@region-height: 1440px;
 @main-header-height: 50px;
 
 .westeros {
@@ -11,17 +11,24 @@
   }
   .regions {
     background-image: url('../../../assets/images/map.jpg');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
     margin: 0 auto;
-    height: 1000px;
-    width: 800px;
-    background-size: cover;
+
+    -webkit-box-shadow: 0 0 100px 50px rgba(0,0,0, 0.8);
+    -moz-box-shadow: 0 0 100px 50px rgba(0,0,0, 0.8);
     box-shadow: 0 0 100px 50px rgba(0,0,0, 0.8);
+
     position: absolute;
     left: 50%;
+    width: 1024px;
+    height: @region-height;
+
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
-    .region {
-      position: absolute;
-      background-color: red;
-    }
   }
 }

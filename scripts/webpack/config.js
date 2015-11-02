@@ -17,7 +17,7 @@ let config = {
   plugins: helpers.getPlugins(),
   progress: true,
   resolve: {
-    //modulesDirectories: ['node_modules', 'shared'],
+    modulesDirectories: ['node_modules', './src/client/shared'],
     extensions: ['', '.js', '.jsx']
   }
 };
