@@ -1,5 +1,5 @@
 @region-height: 1440px;
-@main-header-height: 50px;
+@main-header-height: 60px;
 
 .westeros {
   position: relative;
@@ -7,7 +7,12 @@
   .header {
     text-align: center;
     color: #fff;
+    text-shadow: 1px 1px 1px rgba(0,0,0, 0.8);
+    position: relative;
+    z-index: 2;
     height: @main-header-height;
+    line-height: @main-header-height;
+    font-size: 3em;
   }
   .regions {
     background-image: url('../../../assets/images/map.jpg');
