@@ -32,8 +32,9 @@ export function getLoaders() {
       query: {
         stage: 0,
         plugins: [
-          //path.resolve(__dirname, 'plugins', 'babelRelay.js'),
-          //"object-assign"
+          path.join(__dirname, 'babelRelayPlugin.js')
+          //babelRelayPlugin()
+          //,"object-assign"
         ]
       }
     },

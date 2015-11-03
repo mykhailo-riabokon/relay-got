@@ -87,6 +87,8 @@ class Westeros extends Component {
     return <Region key={index} {...data}/>
   }
   render() {
+    debugger;
+
     return (
         <div className="westeros">
           <h1 className="header">Westeros</h1>

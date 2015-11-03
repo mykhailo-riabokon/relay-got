@@ -1,0 +1,20 @@
+type Family {
+  name: String
+}
+
+type Region {
+  name: String
+  rulers: String
+  capital: String
+  religion: String
+  bastardSurname: String
+}
+
+type Root {
+  viewer: Viewer
+}
+
+type Viewer {
+  regions: [Region]
+  families: [Family]
+}
