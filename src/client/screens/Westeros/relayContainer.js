@@ -9,6 +9,7 @@ export default Relay.createContainer(Westeros, {
     viewer: () => Relay.QL`
       fragment on Viewer {
         regions {
+          id,
           name
         }
       }

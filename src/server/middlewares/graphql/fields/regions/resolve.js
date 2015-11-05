@@ -4,6 +4,7 @@
 export default function () {
   return [
     {
+      id: '1',
       name: 'The North',
       rulers: 'House Stark',
       capital: 'Winterfell',
@@ -11,6 +12,7 @@ export default function () {
       bastardSurname: 'Snow'
     },
     {
+      id: '2',
       name: 'The Vale of Arryn',
       rulers: 'House Arryn',
       capital: 'The Eyrie',
@@ -18,6 +20,7 @@ export default function () {
       bastardSurname: 'Stone'
     },
     {
+      id: '3',
       name: 'The Riverlands',
       rulers: 'House Frey',
       capital: 'Riverrun',
@@ -25,6 +28,7 @@ export default function () {
       bastardSurname: 'Rivers'
     },
     {
+      id: '4',
       name: 'The Westerlands',
       rulers: 'House Lannister',
       capital: 'Casterly Rock',
@@ -32,6 +36,7 @@ export default function () {
       bastardSurname: 'Hill'
     },
     {
+      id: '5',
       name: 'The Iron Islands',
       rulers: 'House Greyjoy',
       capital: 'Pyke',
@@ -39,6 +44,7 @@ export default function () {
       bastardSurname: 'Pyke'
     },
     {
+      id: '6',
       name: 'The Crownlands',
       rulers: 'The King on the Iron Throne',
       capital: 'King\'s Landing',
@@ -46,6 +52,7 @@ export default function () {
       bastardSurname: 'Waters'
     },
     {
+      id: '7',
       name: 'The Stormlands',
       rulers: 'House Baratheon',
       capital: 'Storm\'s End',
@@ -53,6 +60,7 @@ export default function () {
       bastardSurname: 'Storm'
     },
     {
+      id: '8',
       name: 'The Reach',
       rulers: 'House Tyrell',
       capital: 'Highgarden',
@@ -60,6 +68,7 @@ export default function () {
       bastardSurname: 'Flowers'
     },
     {
+      id: '9',
       name: 'Dorne',
       rulers: 'House Martell',
       capital: 'Sunspear',
@@ -67,6 +76,7 @@ export default function () {
       bastardSurname: 'Sand'
     },
     {
+      id: '10',
       name: 'Beyond the Wal',
       rulers: 'King-Beyond-the-Wall',
       capital: null,

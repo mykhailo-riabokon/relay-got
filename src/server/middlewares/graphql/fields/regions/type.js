@@ -3,14 +3,21 @@
  */
 import {
   GraphQLObjectType,
+  GraphQLInt,
   GraphQLString,
-  GraphQLList
+  GraphQLList,
+  GraphQLNonNull,
+  GraphQLID
 } from 'graphql';
 
 const regionType = new GraphQLObjectType({
   name: 'Region',
   descriptions: 'Regions of Seven Kingdoms',
   fields: () => ({
+    id: {
+      type: new GraphQLNonNull(GraphQLID),
+      description: 'The id of the object.',
+    },
     name: {
       type: GraphQLString
     },

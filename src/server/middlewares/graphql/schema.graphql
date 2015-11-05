@@ -3,6 +3,7 @@ type Family {
 }
 
 type Region {
+  id: ID!
   name: String
   rulers: String
   capital: String

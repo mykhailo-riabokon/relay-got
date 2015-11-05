@@ -19,6 +19,12 @@
 }
 
 .region {
+  cursor: pointer;
+  &:hover {
+    .title {
+      text-shadow: 1px 1px 10px rgba(0,0,0, 0.9), 1px 1px 1px rgba(255, 255, 255, 0.9);
+    }
+  }
   position: absolute;
   .title {
     font-size: 2em;
