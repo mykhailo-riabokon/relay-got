@@ -7,12 +7,14 @@ import {
 } from 'graphql';
 import regions from './fields/regions';
 import families from './fields/families';
+import characters from './fields/characters';
 
 let viewerType = new GraphQLObjectType({
   name: 'Viewer',
   fields: () => ({
     regions,
-    families
+    families,
+    characters
   })
 });
 

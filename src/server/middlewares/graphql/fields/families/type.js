@@ -4,19 +4,20 @@
 import {
   GraphQLObjectType,
   GraphQLString,
-  GraphQLList
+  GraphQLList,
+  GraphQLID
 } from 'graphql';
-import members from './fields/members';
 
 const familyType = new GraphQLObjectType({
   name: 'Family',
   descriptions: 'Family',
   fields: () => ({
+    id: {
+      type: GraphQLID
+    },
     name: {
       type: GraphQLString
     }
-    //,
-    //members
   })
 });
 

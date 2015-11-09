@@ -2,8 +2,19 @@
  * Created by mikhail on 02.11.15.
  */
 import React, {PropTypes, Component} from 'react';
+import Relay from 'react-relay';
 
 require('./index.less');
+
+class Family extends Component {
+  render() {
+    return (
+      <h1>Family</h1>
+    );
+  }
+}
+
+
 
 class Region extends Component {
   static propTypes = {
