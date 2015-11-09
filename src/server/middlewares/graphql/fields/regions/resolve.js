@@ -1,8 +1,8 @@
 /**
  * Created by mikhail on 31.10.15.
  */
-export default function () {
-  return [
+export default function (rootValue, {id}) {
+  let result  = [
     {
       id: '1',
       name: 'The North',
@@ -83,5 +83,11 @@ export default function () {
       religion: 'The Old Gods of the Forest',
       bastardSurname: 'Sand'
     }
-  ]
+  ];
+
+  if (id) {
+    result = result.filter(region => region.id === id);
+  }
+
+  return result;
 }

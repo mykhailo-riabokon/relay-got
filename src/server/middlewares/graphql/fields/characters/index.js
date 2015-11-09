@@ -3,8 +3,10 @@
  */
 import type from './type.js';
 import resolve from './resolve.js';
+import args from './args.js';
 
 export default {
+  args,
   type,
   resolve
 }

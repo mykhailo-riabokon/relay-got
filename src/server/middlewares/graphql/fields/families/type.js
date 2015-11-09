@@ -17,6 +17,12 @@ const familyType = new GraphQLObjectType({
     },
     name: {
       type: GraphQLString
+    },
+    region: {
+      type: GraphQLString
+    },
+    words: {
+      type: GraphQLString
     }
   })
 });

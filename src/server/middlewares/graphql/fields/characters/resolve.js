@@ -1,8 +1,8 @@
 /**
  * Created by mikhail on 31.10.15.
  */
-export default function () {
-  return [
+export default function (rootValue, {id}) {
+  let result = [
     {
       id: '1',
       familyId: '1',
@@ -240,5 +240,11 @@ export default function () {
       isDead: true,
       status: 'lord'
     }
-  ]
+  ];
+
+  if (id) {
+    result = result.filter(character => character.id === id);
+  }
+
+  return result;
 }

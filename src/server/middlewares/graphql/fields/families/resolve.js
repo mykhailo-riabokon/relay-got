@@ -1,10 +1,8 @@
 /**
  * Created by mikhail on 31.10.15.
  */
-export default function (rootValue, {familiId}) {
-  console.log(arguments)
-
-  return [
+export default function (rootValue, {id}) {
+  let result = [
     {
       id: '1',
       name: 'Stark',
@@ -47,5 +45,11 @@ export default function (rootValue, {familiId}) {
       region: 'The Stormlands',
       words: 'Ours is the Fury'
     }
-  ]
+  ];
+
+  if (id) {
+    result = result.filter(family => family.id === id);
+  }
+
+  return result;
 }
