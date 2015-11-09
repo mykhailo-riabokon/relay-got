@@ -7,14 +7,34 @@ import Relay from 'react-relay';
 require('./index.less');
 
 class Family extends Component {
+  static defaultProps = {
+    families: null
+  };
+
   render() {
+    let style = {
+      color: '#f00'
+    };
+
+    //debugger;
+
     return (
-      <h1>Family</h1>
+      <h1 style={style}>Family</h1>
     );
   }
 }
 
-
+Family = Relay.createContainer(Family, {
+  fragments: {
+    viewer: () => Relay.QL`
+      fragment on Viewer {
+        families {
+          name
+        }
+      }
+    `
+  }
+});
 
 class Region extends Component {
   static propTypes = {
@@ -24,10 +44,10 @@ class Region extends Component {
   static contextTypes = {
     showModal: PropTypes.func
   };
-  showRegion() {
-    this.context.showModal();
+  showRegion = () => {
+    this.context.showModal(<Family />);
     console.log('show region')
-  }
+  };
   get className() {
     let name = this.props.name.replace(/\W/g, '');
 
@@ -35,7 +55,7 @@ class Region extends Component {
   }
   render() {
     return (
-      <div className={`region ${this.className}`} onClick={::this.showRegion}>
+      <div className={`region ${this.className}`} onClick={this.showRegion}>
         <div className="title">{this.props.name}</div>
       </div>
     );

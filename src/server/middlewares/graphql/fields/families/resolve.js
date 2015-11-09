@@ -1,7 +1,8 @@
 /**
  * Created by mikhail on 31.10.15.
  */
-export default function (rootValue, {id}) {
+export default function (rootValue, args) {
+  let filterKeys = Object.keys(args);
   let result = [
     {
       id: '1',
@@ -47,8 +48,12 @@ export default function (rootValue, {id}) {
     }
   ];
 
-  if (id) {
-    result = result.filter(family => family.id === id);
+  if (filterKeys.length) {
+    result = filterKeys.reduce((memo, filterKey) => {
+      return memo.concat(result.filter(family => {
+        return family[filterKey] === args[filterKey]
+      }));
+    }, []);
   }
 
   return result;
