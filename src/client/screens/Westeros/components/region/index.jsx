@@ -10,7 +10,11 @@ class Region extends Component {
     id: PropTypes.string,
     name: PropTypes.string
   };
+  static contextTypes = {
+    showModal: PropTypes.func
+  };
   showRegion() {
+    this.context.showModal();
     console.log('show region')
   }
   get className() {
@@ -20,7 +24,7 @@ class Region extends Component {
   }
   render() {
     return (
-      <div className={`region ${this.className}`} onClick={this.showRegion}>
+      <div className={`region ${this.className}`} onClick={::this.showRegion}>
         <div className="title">{this.props.name}</div>
       </div>
     );

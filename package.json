@@ -39,6 +39,7 @@
     "mongoose": "^4.2.3",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
+    "react-modal": "^0.6.1",
     "react-relay": "^0.4.0",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.6",
