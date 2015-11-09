@@ -2,39 +2,11 @@
  * Created by mikhail on 02.11.15.
  */
 import React, {PropTypes, Component} from 'react';
-import Relay from 'react-relay';
+import Relay, {RootContainer, Route} from 'react-relay';
+import Family from './components/family/index.js';
+import {Viewer} from '../../../../routes.js';
 
 require('./index.less');
-
-class Family extends Component {
-  static defaultProps = {
-    families: null
-  };
-
-  render() {
-    let style = {
-      color: '#f00'
-    };
-
-    //debugger;
-
-    return (
-      <h1 style={style}>Family</h1>
-    );
-  }
-}
-
-Family = Relay.createContainer(Family, {
-  fragments: {
-    viewer: () => Relay.QL`
-      fragment on Viewer {
-        families {
-          name
-        }
-      }
-    `
-  }
-});
 
 class Region extends Component {
   static propTypes = {
@@ -45,7 +17,7 @@ class Region extends Component {
     showModal: PropTypes.func
   };
   showRegion = () => {
-    this.context.showModal(<Family />);
+    this.context.showModal(<RootContainer route={new Viewer()} Component={Family}/>);
     console.log('show region')
   };
   get className() {
