@@ -3,4 +3,16 @@
  */
 import Relay from 'react-relay';
 
-export const viewer = () => Relay.QL`query { viewer }`;
+export const viewer = () => Relay.QL`
+  query {
+    viewer
+  }
+`;
+
+export const family = (Component, {region}) => Relay.QL`
+  query {
+    family(region: $region) {
+      ${Component.getFragment('family')}
+    }
+  }
+`;

@@ -5,12 +5,14 @@ import Family from './Family.jsx';
 import Relay from 'react-relay';
 
 export default Relay.createContainer(Family, {
+  initialVariables: {
+    region: ''
+  },
   fragments: {
-    viewer: () => Relay.QL`
-      fragment on Viewer {
-        families {
-          name
-        }
+    family: () => Relay.QL`
+      fragment on Family {
+        id,
+        name
       }
     `
   }

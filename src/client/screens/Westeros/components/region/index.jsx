@@ -4,7 +4,7 @@
 import React, {PropTypes, Component} from 'react';
 import Relay, {RootContainer, Route} from 'react-relay';
 import Family from './components/family/index.js';
-import {Viewer} from '../../../../routes.js';
+import {FamilyRoute, Viewer} from '../../../../routes.js';
 
 require('./index.less');
 
@@ -17,8 +17,13 @@ class Region extends Component {
     showModal: PropTypes.func
   };
   showRegion = () => {
-    this.context.showModal(<RootContainer route={new Viewer()} Component={Family}/>);
-    console.log('show region')
+    let route = new FamilyRoute({region: this.props.name});
+
+    this.context.showModal(
+      <RootContainer
+        route={route}
+        Component={Family}/>
+    );
   };
   get className() {
     let name = this.props.name.replace(/\W/g, '');

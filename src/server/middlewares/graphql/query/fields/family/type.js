@@ -4,7 +4,6 @@
 import {
   GraphQLObjectType,
   GraphQLString,
-  GraphQLList,
   GraphQLID
 } from 'graphql';
 
@@ -27,4 +26,4 @@ const familyType = new GraphQLObjectType({
   })
 });
 
-export default new GraphQLList(familyType);
+export default familyType;

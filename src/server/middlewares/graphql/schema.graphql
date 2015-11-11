@@ -1,5 +1,16 @@
-type Family {
+type Character {
+  id: ID!
+  familyId: ID!
   name: String
+  isDead: Boolean
+  title: String
+}
+
+type Family {
+  id: ID
+  name: String
+  region: String
+  words: String
 }
 
 type Region {
@@ -13,9 +24,11 @@ type Region {
 
 type Root {
   viewer: Viewer
+  family(id: ID, region: String): Family
 }
 
 type Viewer {
-  regions: [Region]
+  regions(id: ID): [Region]
   families: [Family]
+  characters(id: ID): [Character]
 }

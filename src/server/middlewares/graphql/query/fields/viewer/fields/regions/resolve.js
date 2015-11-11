@@ -4,7 +4,7 @@
 export default function (rootValue, {id}) {
   let result  = [
     {
-      id: '1',
+      id: '1_region',
       name: 'The North',
       rulers: 'House Stark',
       capital: 'Winterfell',
@@ -12,7 +12,7 @@ export default function (rootValue, {id}) {
       bastardSurname: 'Snow'
     },
     {
-      id: '2',
+      id: '2_region',
       name: 'The Vale of Arryn',
       rulers: 'House Arryn',
       capital: 'The Eyrie',
@@ -20,7 +20,7 @@ export default function (rootValue, {id}) {
       bastardSurname: 'Stone'
     },
     {
-      id: '3',
+      id: '3_region',
       name: 'The Riverlands',
       rulers: 'House Frey',
       capital: 'Riverrun',
@@ -28,7 +28,7 @@ export default function (rootValue, {id}) {
       bastardSurname: 'Rivers'
     },
     {
-      id: '4',
+      id: '4_region',
       name: 'The Westerlands',
       rulers: 'House Lannister',
       capital: 'Casterly Rock',
@@ -36,7 +36,7 @@ export default function (rootValue, {id}) {
       bastardSurname: 'Hill'
     },
     {
-      id: '5',
+      id: '5_region',
       name: 'The Iron Islands',
       rulers: 'House Greyjoy',
       capital: 'Pyke',
@@ -44,7 +44,7 @@ export default function (rootValue, {id}) {
       bastardSurname: 'Pyke'
     },
     {
-      id: '6',
+      id: '6_region',
       name: 'The Crownlands',
       rulers: 'The King on the Iron Throne',
       capital: 'King\'s Landing',
@@ -52,7 +52,7 @@ export default function (rootValue, {id}) {
       bastardSurname: 'Waters'
     },
     {
-      id: '7',
+      id: '7_region',
       name: 'The Stormlands',
       rulers: 'House Baratheon',
       capital: 'Storm\'s End',
@@ -60,7 +60,7 @@ export default function (rootValue, {id}) {
       bastardSurname: 'Storm'
     },
     {
-      id: '8',
+      id: '8_region',
       name: 'The Reach',
       rulers: 'House Tyrell',
       capital: 'Highgarden',
@@ -68,7 +68,7 @@ export default function (rootValue, {id}) {
       bastardSurname: 'Flowers'
     },
     {
-      id: '9',
+      id: '9_region',
       name: 'Dorne',
       rulers: 'House Martell',
       capital: 'Sunspear',
@@ -76,7 +76,7 @@ export default function (rootValue, {id}) {
       bastardSurname: 'Sand'
     },
     {
-      id: '10',
+      id: '10_region',
       name: 'Beyond the Wal',
       rulers: 'King-Beyond-the-Wall',
       capital: null,
