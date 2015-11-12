@@ -4,9 +4,9 @@
 import React, {PropTypes, Component} from 'react';
 import Relay, {RootContainer, Route} from 'react-relay';
 import Family from './components/family/index.js';
-import {FamilyRoute, Viewer} from '../../../../routes.js';
+import {FamilyRoute} from '../../../../routes.js';
 
-require('./index.less');
+require('./region.less');
 
 class Region extends Component {
   static propTypes = {
@@ -17,7 +17,9 @@ class Region extends Component {
     showModal: PropTypes.func
   };
   showRegion = () => {
-    let route = new FamilyRoute({region: this.props.name});
+    let route = new FamilyRoute({
+      region: this.props.name
+    });
 
     this.context.showModal(
       <RootContainer

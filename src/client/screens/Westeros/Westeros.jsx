@@ -2,11 +2,11 @@
  * Created by mikhail on 01.11.15.
  */
 import React, {PropTypes, Component} from 'react';
-import Region from './components/region/index.jsx';
+import Region from './components/region/Region.jsx';
 import List from 'components/List.jsx';
 import Modal from 'components/Modal.jsx';
 
-require('./index.less');
+require('./westeros.less');
 
 class Westeros extends Component {
   static propTypes = {

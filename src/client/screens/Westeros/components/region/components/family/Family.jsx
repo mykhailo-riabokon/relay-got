@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react';
+import Members from './components/memebers/index.js';
 
 require('./family.less');
 
@@ -18,13 +19,14 @@ class Family extends Component {
     let className = `family ${name && name.toLowerCase() || ''}`;
 
     return (
-      <div className={className}>
-        <div className="family__name">{name}</div>
-        <div className="family__crest"></div>
-        <div className="family__words">{words}</div>
+      <div className="family-container">
+        <div className={className}>
+          <div className="family__name">{name}</div>
+          <div className="family__crest"></div>
+          <div className="family__words">{words}</div>
+        </div>
+        <Members />
       </div>
     );
   }
 }
-
-export default Family;
