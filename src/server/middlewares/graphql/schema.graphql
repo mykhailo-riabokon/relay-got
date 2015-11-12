@@ -30,5 +30,5 @@ type Root {
 type Viewer {
   regions(id: ID): [Region]
   families: [Family]
-  characters(id: ID): [Character]
+  characters(id: ID, familyId: String): [Character]
 }

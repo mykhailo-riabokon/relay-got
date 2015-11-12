@@ -16,3 +16,11 @@ export const family = (Component, {region}) => Relay.QL`
     }
   }
 `;
+
+export const members = (Component, {familyId}) => Relay.QL`
+  query {
+    viewer {
+      ${Component.getFragment('members', {familyId})}
+    }
+  }
+`;

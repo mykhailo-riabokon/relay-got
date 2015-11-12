@@ -1,4 +1,6 @@
 import React, {Component, PropTypes} from 'react';
+import {RootContainer} from 'react-relay';
+import {MembersRoute} from '../../../../../../routes.js';
 import Members from './components/memebers/index.js';
 
 require('./family.less');
@@ -15,7 +17,7 @@ class Family extends Component {
   };
 
   render() {
-    let {name, words} = this.props.family;
+    let {name, words, id} = this.props.family;
     let className = `family ${name && name.toLowerCase() || ''}`;
 
     return (
@@ -25,8 +27,10 @@ class Family extends Component {
           <div className="family__crest"></div>
           <div className="family__words">{words}</div>
         </div>
-        <Members />
+        <RootContainer Component={Members} route={new MembersRoute({familyId: id})}/>
       </div>
     );
   }
 }
+
+export default Family;

@@ -32,4 +32,4 @@ const characterType = new GraphQLObjectType({
   })
 });
 
-export default new GraphQLList(characterType);
+export default characterType;
