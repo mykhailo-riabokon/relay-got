@@ -1,21 +1,28 @@
 import React, {Component, PropTypes} from 'react';
 
-let style = {
-  color: '#f00'
-};
+require('./family.less');
 
 class Family extends Component {
   static propTypes = {
-    viewer: PropTypes.object
+    family: PropTypes.object
   };
-
   static defaultProps = {
-    families: null
+    family: {
+      name: '',
+      words: ''
+    }
   };
 
   render() {
+    let {name, words} = this.props.family;
+    let className = `family ${name && name.toLowerCase() || ''}`;
+
     return (
-      <h1 style={style}>Family</h1>
+      <div className={className}>
+        <div className="family__name">{name}</div>
+        <div className="family__crest"></div>
+        <div className="family__words">{words}</div>
+      </div>
     );
   }
 }

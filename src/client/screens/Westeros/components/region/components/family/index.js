@@ -12,7 +12,8 @@ export default Relay.createContainer(Family, {
     family: () => Relay.QL`
       fragment on Family {
         id,
-        name
+        name,
+        words
       }
     `
   }

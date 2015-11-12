@@ -1,18 +1,20 @@
 /**
  * Created by mikhail on 11.11.15.
  */
+//,
+//bustards: [
+//  {
+//    name: 'John',
+//    isDead: true
+//  }
+//]
+
 export default [
   {
     id: '1_family',
     name: 'Stark',
     region: 'The North',
-    words: 'Winter is Coming',
-    bustards: [
-      {
-        name: 'John',
-        isDead: true
-      }
-    ]
+    words: 'Winter is Coming'
   },
   {
     id: '2_family',

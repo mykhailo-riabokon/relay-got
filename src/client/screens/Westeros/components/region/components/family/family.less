@@ -1,0 +1,31 @@
+@family-height: 800px;
+@family-width: 500px;
+
+@family__crest-height: @family-width;
+@family__crest-width: @family__crest-height;
+
+.family {
+  width: @family-width;
+  height: @family-height;
+  margin: auto;
+  color: #ffffff;
+  text-align: center;
+  .family__name {
+    font-size: 3em;
+  }
+  .family__crest {
+    width: @family__crest-width;
+    height: @family__crest-height;
+    background-color: red;
+    background-size: cover;
+  }
+  .family__words {
+    margin: 20px 0;
+    font-size: 2em;
+  }
+  &.stark {
+    .family__crest {
+      background-image: url('../../../../../../../assets/images/crests/stark.jpg');
+    }
+  }
+}
