@@ -3,7 +3,7 @@
  */
 import Relay from 'react-relay';
 import Members from './Memebers.jsx';
-//import Member from './components/member/index.js';
+import Member from './components/member/index.js';
 
 export default Relay.createContainer(Members, {
   initialVariables: {
@@ -14,7 +14,7 @@ export default Relay.createContainer(Members, {
     members: () => Relay.QL`
       fragment on Viewer {
         characters(familyId: $familyId) {
-          name
+          ${Member.getFragment('member')}
         }
       }
     `

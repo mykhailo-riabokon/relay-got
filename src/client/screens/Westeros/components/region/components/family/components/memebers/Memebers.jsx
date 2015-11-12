@@ -1,4 +1,6 @@
 import React, {PropTypes, Component} from 'react';
+import List from 'components/List.jsx';
+import Member from './components/member/Member.jsx';
 
 class Members extends Component {
   static propTypes = {
@@ -9,11 +11,12 @@ class Members extends Component {
       characters: []
     }
   };
+  getMember(data, index) {
+    return <Member key={index} {...data}/>
+  }
   render() {
-    console.log(this.props.members.characters);
-
     return (
-        <h1>members</h1>
+      <List data={this.props.members.characters} renderItemMethod={this.getMember}/>
     );
   }
 }
