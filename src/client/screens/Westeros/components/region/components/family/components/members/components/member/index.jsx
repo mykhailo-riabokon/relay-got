@@ -11,8 +11,9 @@ export class Member extends Component {
     };
 
     return (
-        <div className="member" style={style}>
-          <h5>{name}</h5>
+        <div className="member">
+          <div className="member__photo" style={style}></div>
+          <div className="member__name">{name}</div>
         </div>
     );
   }

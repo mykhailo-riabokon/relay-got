@@ -1,8 +1,25 @@
+@member__name-height: 30px;
+
+@member__photo-height: 200px;
+@member__photo-width: @member__photo-height;
+
+@member-height: @member__photo-height + @member__name-height;
+@member-width: @member__photo-width;
+
 .member {
-  color: #fff;
-  width: 200px;
-  height: 200px;
-  margin: 10px;
-  background-color: #000;
-  background-size: cover;
+  width: @member-width;
+  height: @member-height;
+  margin: 15px 10px;
+  .member__photo {
+    height: @member__photo-height;
+    width: @member__photo-width;
+    background-color: #000;
+    background-size: cover;
+  }
+  .member__name {
+    color: #fff;
+    text-align: center;
+    height: @member__name-height;
+    line-height: @member__name-height;
+  }
 }
