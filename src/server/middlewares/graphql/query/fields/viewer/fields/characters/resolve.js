@@ -10,7 +10,9 @@ export default function (rootValue, args) {
   if (filterKeys.length) {
     result = filterKeys.reduce((memo, filterKey) => {
       return memo.concat(result.filter(character => {
-        return character[filterKey] === args[filterKey]
+        let existed = memo.find(record => record.id === character.id);
+
+        return !existed && character[filterKey] === args[filterKey];
       }));
     }, []);
   }

@@ -72,7 +72,6 @@ export function getLoaders() {
 
 export function getPlugins() {
   let result = [
-    new CleanWebpackPlugin(distAssetsPath),
     new TransferWebpackPlugin([
       {
         from: 'src/assets/images',
@@ -105,6 +104,10 @@ export function getPlugins() {
   }
 
   if (__PRODUCTION__) {
+    result.unshift(
+      new CleanWebpackPlugin(distAssetsPath)
+    );
+
     delete uglifyConfig.exclude;
   }
 

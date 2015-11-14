@@ -3,6 +3,8 @@ import Relay from 'react-relay';
 import List from 'components/List.jsx';
 import Member from './components/member/index.jsx';
 
+require('./members.less');
+
 export class Members extends Component {
   static propTypes = {
     members: PropTypes.object
@@ -17,7 +19,7 @@ export class Members extends Component {
   }
   render() {
     return (
-      <List data={this.props.members.characters} renderItemMethod={this.getMember}/>
+      <List className="members" data={this.props.members.characters} renderItemMethod={this.getMember}/>
     );
   }
 }
