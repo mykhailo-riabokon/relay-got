@@ -8,7 +8,8 @@ export default Relay.createContainer(Member, {
   fragments: {
     member: () => Relay.QL`
       fragment on Character {
-        name
+        name,
+        id
       }
     `
   }
