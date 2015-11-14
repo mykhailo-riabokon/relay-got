@@ -41,10 +41,9 @@ export class Westeros extends Component {
     };
   }
 
-  getRegion(data, index) {
-    return <Region key={index} {...data}/>
+  getRegion(region, index) {
+    return <Region key={index} region={region}/>
   }
-
   render() {
     return (
       <div className="westeros">
@@ -61,8 +60,7 @@ export default Relay.createContainer(Westeros, {
     viewer: () => Relay.QL`
       fragment on Viewer {
         regions {
-          id,
-          name
+          ${Region.getFragment('region')}
         }
       }
     `

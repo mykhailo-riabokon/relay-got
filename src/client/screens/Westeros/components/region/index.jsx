@@ -8,17 +8,16 @@ import {FamilyRoute} from 'core/routes.js';
 
 require('./region.less');
 
-class Region extends Component {
+export class Region extends Component {
   static propTypes = {
-    id: PropTypes.string,
-    name: PropTypes.string
+    region: PropTypes.object
   };
   static contextTypes = {
     showModal: PropTypes.func
   };
   showRegion = () => {
     let route = new FamilyRoute({
-      region: this.props.name
+      regionId: this.props.region.id
     });
 
     this.context.showModal(
@@ -28,17 +27,28 @@ class Region extends Component {
     );
   };
   get className() {
-    let name = this.props.name.replace(/\W/g, '');
+    let {name} = this.props.region || '';
+
+    name = name.replace(/\W/g, '');
 
     return name.substr(0, 1).toLowerCase() + name.substr(1);
   }
   render() {
     return (
       <div className={`region ${this.className}`} onClick={this.showRegion}>
-        <div className="title">{this.props.name}</div>
+        <div className="title">{this.props.region.name}</div>
       </div>
     );
   }
 }
 
-export default Region;
+export default Relay.createContainer(Region, {
+  fragments: {
+    region: () => Relay.QL`
+      fragment on Region {
+        id,
+        name
+      }
+    `
+  }
+});

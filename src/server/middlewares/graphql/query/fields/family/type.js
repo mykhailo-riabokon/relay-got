@@ -14,10 +14,10 @@ const familyType = new GraphQLObjectType({
     id: {
       type: GraphQLID
     },
-    name: {
-      type: GraphQLString
+    regionId: {
+      type: GraphQLID
     },
-    region: {
+    name: {
       type: GraphQLString
     },
     words: {

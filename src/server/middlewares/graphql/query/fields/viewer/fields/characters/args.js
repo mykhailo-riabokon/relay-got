@@ -8,6 +8,9 @@ export default {
     type: GraphQLID
   },
   familyId: {
-    type: GraphQLString
+    type: GraphQLID
+  },
+  regionId: {
+    type: GraphQLID
   }
 }

@@ -21,7 +21,7 @@ export default [
   {
     id: '3_region',
     name: 'The Riverlands',
-    rulers: 'House Frey',
+    rulers: 'House Tully',
     capital: 'Riverrun',
     religion: null,
     bastardSurname: 'Rivers'

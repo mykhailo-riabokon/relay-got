@@ -10,7 +10,7 @@ export default {
   id: {
     type: GraphQLID
   },
-  region: {
-    type: GraphQLString
+  regionId: {
+    type: GraphQLID
   }
 }

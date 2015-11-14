@@ -24,6 +24,11 @@ export class Family extends Component {
       backgroundImage: `url(${coatOfArms})`
     };
 
+    let memberRoute = new MembersRoute({
+      familyId: id,
+      regionId: this.props.relay.variables.regionId
+    });
+
     return (
       <div className="family-container">
         <div className={className}>
@@ -31,13 +36,17 @@ export class Family extends Component {
           <div className="family__coat-of-arms" style={style}></div>
           <div className="family__words">{words}</div>
         </div>
-        <RootContainer Component={Members} route={new MembersRoute({familyId: id})}/>
+        <RootContainer Component={Members} route={memberRoute}/>
       </div>
     );
   }
 }
 
 export default Relay.createContainer(Family, {
+  initialVariables: {
+    regionId: ''
+  },
+
   fragments: {
     family: () => Relay.QL`
       fragment on Family {

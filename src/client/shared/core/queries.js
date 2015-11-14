@@ -9,18 +9,18 @@ export const viewer = () => Relay.QL`
   }
 `;
 
-export const family = (Component, {region}) => Relay.QL`
+export const family = (Component, {regionId}) => Relay.QL`
   query {
-    family(region: $region) {
-      ${Component.getFragment('family')}
+    family(regionId: $regionId) {
+      ${Component.getFragment('family', {regionId})}
     }
   }
 `;
 
-export const members = (Component, {familyId}) => Relay.QL`
+export const members = (Component, {familyId, regionId}) => Relay.QL`
   query {
     viewer {
-      ${Component.getFragment('members', {familyId})}
+      ${Component.getFragment('members', {familyId, regionId})}
     }
   }
 `;

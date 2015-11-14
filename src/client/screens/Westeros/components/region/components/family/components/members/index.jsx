@@ -24,13 +24,14 @@ export class Members extends Component {
 
 export default Relay.createContainer(Members, {
   initialVariables: {
-    familyId: ''
+    familyId: '',
+    regionId: ''
   },
 
   fragments: {
     members: () => Relay.QL`
       fragment on Viewer {
-        characters(familyId: $familyId) {
+        characters(familyId: $familyId, regionId: $regionId) {
           ${Member.getFragment('member')}
         }
       }
