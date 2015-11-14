@@ -22,6 +22,9 @@ const familyType = new GraphQLObjectType({
     },
     words: {
       type: GraphQLString
+    },
+    coatOfArms: {
+      type: GraphQLString
     }
   })
 });

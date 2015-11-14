@@ -18,14 +18,17 @@ export class Family extends Component {
   };
 
   render() {
-    let {name, words, id} = this.props.family;
+    let {name, words, id, coatOfArms} = this.props.family;
     let className = `family ${name && name.toLowerCase() || ''}`;
+    let style = {
+      backgroundImage: `url(${coatOfArms})`
+    };
 
     return (
       <div className="family-container">
         <div className={className}>
           <div className="family__name">{name}</div>
-          <div className="family__crest"></div>
+          <div className="family__coat-of-arms" style={style}></div>
           <div className="family__words">{words}</div>
         </div>
         <RootContainer Component={Members} route={new MembersRoute({familyId: id})}/>
@@ -40,7 +43,8 @@ export default Relay.createContainer(Family, {
       fragment on Family {
         id,
         name,
-        words
+        words,
+        coatOfArms
       }
     `
   }

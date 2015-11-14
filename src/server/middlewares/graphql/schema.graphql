@@ -11,6 +11,7 @@ type Family {
   name: String
   region: String
   words: String
+  coatOfArms: String
 }
 
 type Region {
