@@ -19,7 +19,10 @@ export class Members extends Component {
   }
   render() {
     return (
-      <List className="members" data={this.props.members.characters} renderItemMethod={this.getMember}/>
+      <div className="members-container">
+        <h2 className="member-header">Citizens</h2>
+        <List className="members" data={this.props.members.characters} renderItemMethod={this.getMember}/>
+      </div>
     );
   }
 }
