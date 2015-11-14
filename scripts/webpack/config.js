@@ -9,7 +9,7 @@ let config = {
   output: {
     path: jsOutputPath,
     filename: 'app.js',
-    publicPath: '/assets/'
+    publicPath: '/assets/js/'
   },
   module: {
     loaders: helpers.getLoaders()

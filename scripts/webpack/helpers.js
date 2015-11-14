@@ -2,9 +2,15 @@
  * Created by mikhail on 26.10.15.
  */
 import path from 'path';
-import {clientSourcePath, __DEVELOPMENT__, __PRODUCTION__, __HOT__} from '../../config.js';
+import {
+  clientSourcePath,
+  __DEVELOPMENT__,
+  __PRODUCTION__,
+  __HOT__
+} from '../../config.js';
 import {notify} from './plugins.js';
 import webpack from 'webpack';
+import TransferWebpackPlugin from 'transfer-webpack-plugin';
 
 export function getEntries() {
   let result = [
@@ -33,8 +39,6 @@ export function getLoaders() {
         stage: 0,
         plugins: [
           path.join(__dirname, 'babelRelayPlugin.js')
-          //babelRelayPlugin()
-          //,"object-assign"
         ]
       }
     },
@@ -66,6 +70,12 @@ export function getLoaders() {
 
 export function getPlugins() {
   let result = [
+    new TransferWebpackPlugin([
+      {
+        from: 'src/assets/images',
+        to: '../images'
+      }
+    ]),
     new webpack.DefinePlugin({
       __DEVELOPMENT__: __DEVELOPMENT__,
       'process.env': {

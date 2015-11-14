@@ -1,13 +1,13 @@
 /**
  * Created by mikhail on 26.10.15.
  */
-import {__PRODUCTION__, port} from '../../config.js';
+import {__DEVELOPMENT__, port} from '../../config.js';
 
 export function getJsPath() {
-  let path = `http://localhost:${port}/assets/app.js`;
+  let path = '/assets/js/app.js';
 
-  if (__PRODUCTION__) {
-    path = '/assets/js/app.js';
+  if (__DEVELOPMENT__) {
+    path = `http://localhost:${port}${path}`;
   }
 
   return path;

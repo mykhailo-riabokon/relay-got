@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "update-schema": "babel-node ./scripts/updateSchema.js",
-    "webpack": "NODE_ENV=development babel-node ./scripts/webpack/index.js",
-    "dev": "HOT=1 NODE_ENV=development nodemon ./index.js"
+    "webpack": "babel-node ./scripts/webpack/index.js",
+    "dev": "HOT=1 NODE_ENV=development npm run webpack && HOT=1 NODE_ENV=development nodemon ./index.js",
+    "production": "NODE_ENV=production npm run webpack && NODE_ENV=production node ./index.js"
   },
   "repository": {
     "type": "git",
@@ -42,6 +43,7 @@
     "react-modal": "^0.6.1",
     "react-relay": "^0.4.0",
     "style-loader": "^0.13.0",
+    "transfer-webpack-plugin": "^0.1.4",
     "url-loader": "^0.5.6",
     "webpack": "^1.12.2",
     "webpack-hot-middleware": "^2.4.1"

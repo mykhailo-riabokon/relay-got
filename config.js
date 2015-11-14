@@ -9,5 +9,9 @@ export const __PRODUCTION__ = isProduction;
 export const __DEVELOPMENT__ = !isProduction;
 export const __HOT__ = Boolean(process.env.HOT);
 export const sourcePath = path.resolve(__dirname, 'src');
+export const srcAssetsPath = path.join(sourcePath, 'assets');
+export const distAssetsPath = path.join(__dirname, 'assets');
 export const clientSourcePath = path.join(sourcePath, 'client');
-export const jsOutputPath = path.resolve(__dirname, 'assets', 'js');
+export const jsOutputPath = path.join(distAssetsPath, 'js');
+
+
