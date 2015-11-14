@@ -4,6 +4,7 @@
 import path from 'path';
 import {
   clientSourcePath,
+  distAssetsPath,
   __DEVELOPMENT__,
   __PRODUCTION__,
   __HOT__
@@ -11,6 +12,7 @@ import {
 import {notify} from './plugins.js';
 import webpack from 'webpack';
 import TransferWebpackPlugin from 'transfer-webpack-plugin';
+import CleanWebpackPlugin from 'clean-webpack-plugin';
 
 export function getEntries() {
   let result = [
@@ -70,6 +72,7 @@ export function getLoaders() {
 
 export function getPlugins() {
   let result = [
+    new CleanWebpackPlugin(distAssetsPath),
     new TransferWebpackPlugin([
       {
         from: 'src/assets/images',
