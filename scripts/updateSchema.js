@@ -9,9 +9,7 @@ import {introspectionQuery, printSchema} from 'graphql/utilities';
 
 let graphQlPath = path.join(__dirname, '../src/server/middlewares/graphql');
 
-//console.log(graphQlPath);
-
-// Save JSON of full schema introspection for Babel Relay Plugin to use
+console.log('Start update schema');
 async () => {
   let result = await (graphql(schema, introspectionQuery));
 

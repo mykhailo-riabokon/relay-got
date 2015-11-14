@@ -6,8 +6,8 @@
   "scripts": {
     "update-schema": "babel-node ./scripts/updateSchema.js",
     "webpack": "babel-node ./scripts/webpack/index.js",
-    "dev": "HOT=1 NODE_ENV=development npm run webpack && HOT=1 NODE_ENV=development nodemon ./index.js",
-    "production": "NODE_ENV=production npm run webpack && NODE_ENV=production node ./index.js"
+    "dev": "npm run update-schema && HOT=1 NODE_ENV=development npm run webpack && HOT=1 NODE_ENV=development nodemon ./index.js",
+    "prod": "npm run update-schema && NODE_ENV=production npm run webpack && NODE_ENV=production node ./index.js"
   },
   "repository": {
     "type": "git",

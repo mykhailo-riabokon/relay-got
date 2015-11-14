@@ -1,3 +1,7 @@
 {
-  "ignore": ["src/client/**/*.*"]
+  "ignore": [
+    "src/client/**/*.*",
+    "config.js",
+    "package.json"
+  ]
 }
