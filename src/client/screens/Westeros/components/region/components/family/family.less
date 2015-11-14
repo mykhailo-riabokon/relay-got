@@ -1,26 +1,37 @@
-@family-height: 700px;
-@family-width: 500px;
+@family-height: 500px;
+@family-width: 350px;
 
 @family__crest-height: @family-width;
 @family__crest-width: @family__crest-height;
 
+.family-container {
+  display: flex;
+}
+
 .family {
   width: @family-width;
   height: @family-height;
-  margin: auto;
   color: #ffffff;
   text-align: center;
-  .family__name {
-    font-size: 3em;
-  }
   .family__coat-of-arms {
     width: @family__crest-width;
     height: @family__crest-height;
     background-color: #000;
     background-size: cover;
   }
-  .family__words {
+  .info {
+    display: flex;
     margin: 20px 0;
-    font-size: 2em;
+    font-size: 1em;
+    justify-content: flex-start;
+    align-content: center;
+    .label {
+      width: 100px;
+      text-align: left;
+    }
+    .value {
+      width: 250px;
+      text-align: right;
+    }
   }
 }
