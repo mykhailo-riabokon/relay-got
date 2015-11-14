@@ -8,38 +8,42 @@ require('./family.less');
 
 export class Family extends Component {
   static propTypes = {
-    family: PropTypes.object
-  };
-  static defaultProps = {
-    family: {
-      name: '',
-      words: ''
-    }
+    family: PropTypes.object,
+    relay: PropTypes.object.isRequired
   };
 
-  render() {
-    let {name, words, id, coatOfArms} = this.props.family;
+  getRullerFamily() {
+    let {name, words, coatOfArms} = this.props.family;
     let style = {
       backgroundImage: `url(${coatOfArms})`
     };
+
+    return (
+      <div className="family">
+        <div className="info">
+          <div className="label">Rulers:</div>
+          <div className="value">{`House ${name}`}</div>
+        </div>
+        <div className="family__coat-of-arms" style={style}></div>
+        <div className="info">
+          <div className="label">Words:</div>
+          <div className="value">{words}</div>
+        </div>
+      </div>
+    );
+  }
+
+  render() {
+    let {family} = this.props;
+
     let memberRoute = new MembersRoute({
-      familyId: id,
+      familyId: family && family.id || '',
       regionId: this.props.relay.variables.regionId
     });
 
     return (
       <div className="family-container">
-        <div className="family">
-          <div className="info">
-            <div className="label">Rulers:</div>
-            <div className="value">{`House ${name}`}</div>
-          </div>
-          <div className="family__coat-of-arms" style={style}></div>
-          <div className="info">
-            <div className="label">Words:</div>
-            <div className="value">{words}</div>
-          </div>
-        </div>
+        {family && this.getRullerFamily()}
         <RootContainer Component={Members} route={memberRoute}/>
       </div>
     );
