@@ -18,7 +18,10 @@ const characterType = new GraphQLObjectType({
       type: new GraphQLNonNull(GraphQLID)
     },
     familyId: {
-      type: new GraphQLNonNull(GraphQLID)
+      type: GraphQLID
+    },
+    regionId: {
+      type: GraphQLID
     },
     name: {
       type: GraphQLString
@@ -27,6 +30,9 @@ const characterType = new GraphQLObjectType({
       type: GraphQLBoolean
     },
     title: {
+      type: GraphQLString
+    },
+    photo: {
       type: GraphQLString
     }
   })
