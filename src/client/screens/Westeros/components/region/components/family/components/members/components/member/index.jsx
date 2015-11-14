@@ -5,16 +5,17 @@ require('./member.less');
 
 export class Member extends Component {
   render() {
-    let {name, photo} = this.props.member;
+    let {name, photo, isDead} = this.props.member;
     let style = {
       backgroundImage: `url(${photo})`
     };
+    let classes = `member ${isDead ? 'dead': ''}`;
 
     return (
-        <div className="member">
-          <div className="member__photo" style={style}></div>
-          <div className="member__name">{name}</div>
-        </div>
+      <div className={classes}>
+        <div className="member__photo" style={style}></div>
+        <div className="member__name">{name}</div>
+      </div>
     );
   }
 }

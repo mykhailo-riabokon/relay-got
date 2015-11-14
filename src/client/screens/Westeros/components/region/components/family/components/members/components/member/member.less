@@ -22,4 +22,23 @@
     height: @member__name-height;
     line-height: @member__name-height;
   }
+  &.dead {
+    .member__photo {
+      position: relative;
+      &:before {
+        position: relative;
+        top: -2px;
+        content: 'X';
+        width: @member__photo-width;
+        height: @member__photo-height;
+        font-size: @member__photo-height;
+        display: block;
+        text-align: center;
+        color: #ff0000;
+      }
+    }
+    .member__name {
+      color: #ff0000;
+    }
+  }
 }
