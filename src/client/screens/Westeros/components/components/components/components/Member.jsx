@@ -1,8 +1,15 @@
-/**
- * Created by mikhail on 12.11.15.
- */
+import React, {PropTypes, Component} from 'react';
 import Relay from 'react-relay';
-import Member from './Member.jsx';
+
+export class Member extends Component {
+  render() {
+    console.log(this.props);
+
+    return (
+        <h1>member</h1>
+    );
+  }
+}
 
 export default Relay.createContainer(Member, {
   fragments: {

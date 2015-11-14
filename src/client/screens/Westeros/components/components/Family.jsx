@@ -1,11 +1,12 @@
 import React, {Component, PropTypes} from 'react';
+import Relay from 'react-relay';
 import {RootContainer} from 'react-relay';
-import {MembersRoute} from '../../../../../../routes.js';
-import Members from './components/memebers/index.js';
+import {MembersRoute} from '../../../../../routes.js';
+import Members from './components/Memebers.jsx';
 
 require('./family.less');
 
-class Family extends Component {
+export class Family extends Component {
   static propTypes = {
     family: PropTypes.object
   };
@@ -33,4 +34,14 @@ class Family extends Component {
   }
 }
 
-export default Family;
+export default Relay.createContainer(Family, {
+  fragments: {
+    family: () => Relay.QL`
+      fragment on Family {
+        id,
+        name,
+        words
+      }
+    `
+  }
+});

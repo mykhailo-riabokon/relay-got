@@ -1,8 +1,9 @@
 import React, {PropTypes, Component} from 'react';
+import Relay from 'react-relay';
 import List from 'components/List.jsx';
-import Member from './components/member/index.js';
+import Member from './components/Member.jsx';
 
-class Members extends Component {
+export class Members extends Component {
   static propTypes = {
     members: PropTypes.object
   };
@@ -21,4 +22,19 @@ class Members extends Component {
   }
 }
 
-export default Members;
+export default Relay.createContainer(Members, {
+  initialVariables: {
+    familyId: ''
+  },
+
+  fragments: {
+    members: () => Relay.QL`
+      fragment on Viewer {
+        characters(familyId: $familyId) {
+          ${Member.getFragment('member')}
+        }
+      }
+    `
+  }
+});
+

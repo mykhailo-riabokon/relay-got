@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import {render} from 'react-dom';
-import Westeros from './screens/Westeros';
+import Westeros from './screens/Westeros/Westeros.jsx';
 import Relay, {RootContainer, Route} from 'react-relay';
 import {Viewer} from './routes.js';
 

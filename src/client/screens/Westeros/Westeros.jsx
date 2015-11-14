@@ -2,13 +2,14 @@
  * Created by mikhail on 01.11.15.
  */
 import React, {PropTypes, Component} from 'react';
+import Relay from 'react-relay';
 import Region from './components/region/Region.jsx';
 import List from 'components/List.jsx';
 import Modal from 'components/Modal.jsx';
 
 require('./westeros.less');
 
-class Westeros extends Component {
+export class Westeros extends Component {
   static propTypes = {
     viewer: PropTypes.object
   };
@@ -55,4 +56,15 @@ class Westeros extends Component {
   }
 }
 
-export default Westeros;
+export default Relay.createContainer(Westeros, {
+  fragments: {
+    viewer: () => Relay.QL`
+      fragment on Viewer {
+        regions {
+          id,
+          name
+        }
+      }
+    `
+  }
+});
