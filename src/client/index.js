@@ -3,9 +3,9 @@
  */
 import React from 'react';
 import {render} from 'react-dom';
-import Westeros from './screens/Westeros/Westeros.jsx';
+import Westeros from './screens/Westeros/index.jsx';
 import Relay, {RootContainer, Route} from 'react-relay';
-import {Viewer} from './routes.js';
+import {Viewer} from 'core/routes.js';
 
 require('./index.less');
 

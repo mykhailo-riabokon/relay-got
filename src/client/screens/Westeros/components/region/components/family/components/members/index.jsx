@@ -1,7 +1,7 @@
 import React, {PropTypes, Component} from 'react';
 import Relay from 'react-relay';
 import List from 'components/List.jsx';
-import Member from './components/Member.jsx';
+import Member from './components/member/index.jsx';
 
 export class Members extends Component {
   static propTypes = {

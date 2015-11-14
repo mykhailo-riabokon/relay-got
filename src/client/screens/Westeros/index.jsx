@@ -3,7 +3,7 @@
  */
 import React, {PropTypes, Component} from 'react';
 import Relay from 'react-relay';
-import Region from './components/region/Region.jsx';
+import Region from './components/region/index.jsx';
 import List from 'components/List.jsx';
 import Modal from 'components/Modal.jsx';
 

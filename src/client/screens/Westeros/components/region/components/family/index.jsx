@@ -1,8 +1,8 @@
 import React, {Component, PropTypes} from 'react';
 import Relay from 'react-relay';
 import {RootContainer} from 'react-relay';
-import {MembersRoute} from '../../../../../routes.js';
-import Members from './components/Memebers.jsx';
+import {MembersRoute} from 'core/routes.js';
+import Members from './components/members/index.jsx';
 
 require('./family.less');
 

@@ -3,8 +3,8 @@
  */
 import React, {PropTypes, Component} from 'react';
 import Relay, {RootContainer, Route} from 'react-relay';
-import Family from './components/Family.jsx';
-import {FamilyRoute} from '../../../../routes.js';
+import Family from './components/family/index.jsx';
+import {FamilyRoute} from 'core/routes.js';
 
 require('./region.less');
 
