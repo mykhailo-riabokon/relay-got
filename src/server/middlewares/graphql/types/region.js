@@ -1,5 +1,5 @@
 /**
- * Created by mikhail on 31.10.15.
+ * Created by mikhail on 19.11.15.
  */
 import {
   GraphQLObjectType,
@@ -36,4 +36,4 @@ const regionType = new GraphQLObjectType({
   })
 });
 
-export default new GraphQLList(regionType);
+export default regionType;

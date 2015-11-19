@@ -2,8 +2,8 @@
  * Created by mikhail on 31.10.15.
  */
 import {GraphQLSchema} from 'graphql';
-import query from './query';
+import root from './queries/root.js';
 
 export default new GraphQLSchema({
-  query
+  query: root
 });
