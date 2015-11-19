@@ -1,6 +1,7 @@
 export default [
   {
     id: '1_character',
+    type: 'character',
     familyId: '1_family',
     regionId: '1_region',
     name: 'Catelyn Stark',
@@ -10,6 +11,7 @@ export default [
   },
   {
     id: '2_character',
+    type: 'character',
     familyId: '1_family',
     regionId: '1_region',
     name: 'Eddard Stark',
@@ -19,6 +21,7 @@ export default [
   },
   {
     id: '3_character',
+    type: 'character',
     familyId: '1_family',
     regionId: '1_region',
     name: 'Robb Stark',
@@ -28,6 +31,7 @@ export default [
   },
   {
     id: '4_character',
+    type: 'character',
     familyId: '1_family',
     regionId: '1_region',
     name: 'Sansa Stark',
@@ -37,6 +41,7 @@ export default [
   },
   {
     id: '5_character',
+    type: 'character',
     familyId: '1_family',
     regionId: '1_region',
     name: 'Arya Stark',
@@ -46,6 +51,7 @@ export default [
   },
   {
     id: '6_character',
+    type: 'character',
     familyId: '1_family',
     regionId: '1_region',
     name: 'Bran Stark',
@@ -55,6 +61,7 @@ export default [
   },
   {
     id: '7_character',
+    type: 'character',
     familyId: '1_family',
     regionId: '1_region',
     name: 'Rickon Stark',
@@ -64,6 +71,7 @@ export default [
   },
   {
     id: '8_character',
+    type: 'character',
     familyId: '2_family',
     regionId: '2_region',
     name: 'John Arryn',
@@ -73,6 +81,7 @@ export default [
   },
   {
     id: '9_character',
+    type: 'character',
     familyId: '2_family',
     regionId: '2_region',
     name: 'Lysa Arryn',
@@ -82,6 +91,7 @@ export default [
   },
   {
     id: '10_character',
+    type: 'character',
     familyId: '2_family',
     regionId: '2_region',
     name: 'Robin Arryn',
@@ -91,6 +101,7 @@ export default [
   },
   {
     id: '11_character',
+    type: 'character',
     familyId: '3_family',
     regionId: '3_region',
     name: 'Hoster Tully',
@@ -100,6 +111,7 @@ export default [
   },
   {
     id: '12_character',
+    type: 'character',
     familyId: '3_family',
     regionId: '3_region',
     name: 'Manisa Tully',
@@ -109,6 +121,7 @@ export default [
   },
   {
     id: '15_character',
+    type: 'character',
     familyId: '3_family',
     regionId: '3_region',
     name: 'Edmure Tully',
@@ -118,6 +131,7 @@ export default [
   },
   {
     id: '16_character',
+    type: 'character',
     familyId: '3_family',
     regionId: '3_region',
     name: 'Brynden Tully',
@@ -127,6 +141,7 @@ export default [
   },
   {
     id: '17_character',
+    type: 'character',
     familyId: '4_family',
     regionId: '8_region',
     name: 'Tywin Lannister',
@@ -136,6 +151,7 @@ export default [
   },
   {
     id: '18_character',
+    type: 'character',
     familyId: '4_family',
     regionId: '8_region',
     name: 'Joanna Lannister',
@@ -145,6 +161,7 @@ export default [
   },
   {
     id: '20_character',
+    type: 'character',
     familyId: '4_family',
     regionId: '4_region',
     name: 'Jaime Lannister',
@@ -154,6 +171,7 @@ export default [
   },
   {
     id: '21_character',
+    type: 'character',
     familyId: '4_family',
     regionId: '4_region',
     name: 'Tyrion Lannister',
@@ -163,6 +181,7 @@ export default [
   },
   {
     id: '22_character',
+    type: 'character',
     familyId: '5_family',
     regionId: '5_region',
     name: 'Balon Greyjoy',
@@ -172,6 +191,7 @@ export default [
   },
   {
     id: '24_character',
+    type: 'character',
     familyId: '5_family',
     regionId: '5_region',
     name: 'Rodrik Greyjoy',
@@ -181,6 +201,7 @@ export default [
   },
   {
     id: '25_character',
+    type: 'character',
     familyId: '5_family',
     regionId: '5_region',
     name: 'Maron Greyjoy',
@@ -190,6 +211,7 @@ export default [
   },
   {
     id: '26_character',
+    type: 'character',
     familyId: '5_family',
     regionId: '5_region',
     name: 'Yara Greyjoy',
@@ -199,6 +221,7 @@ export default [
   },
   {
     id: '27_character',
+    type: 'character',
     familyId: '5_family',
     regionId: '5_region',
     name: 'Theon Greyjoy',
@@ -208,6 +231,7 @@ export default [
   },
   {
     id: '28_character',
+    type: 'character',
     familyId: '6_family',
     regionId: '6_region',
     name: 'Robert Baratheon',
@@ -217,6 +241,7 @@ export default [
   },
   {
     id: '29_character',
+    type: 'character',
     familyId: '6_family',
     regionId: '6_region',
     name: 'Cersei Baratheon',
@@ -226,6 +251,7 @@ export default [
   },
   {
     id: '30_character',
+    type: 'character',
     familyId: '6_family',
     regionId: '6_region',
     name: 'Joffrey Baratheon',
@@ -235,6 +261,7 @@ export default [
   },
   {
     id: '31_character',
+    type: 'character',
     familyId: '6_family',
     regionId: '6_region',
     name: 'Myrcella Baratheon',
@@ -244,6 +271,7 @@ export default [
   },
   {
     id: '32_character',
+    type: 'character',
     familyId: '6_family',
     regionId: '6_region',
     name: 'Tommen Baratheon',
@@ -253,6 +281,7 @@ export default [
   },
   {
     id: '33_character',
+    type: 'character',
     familyId: '6_family',
     regionId: '6_region',
     name: 'Stannis Baratheon',
@@ -262,6 +291,7 @@ export default [
   },
   {
     id: '34_character',
+    type: 'character',
     familyId: '6_family',
     regionId: '7_region',
     name: 'Renly Baratheon',
@@ -271,6 +301,7 @@ export default [
   },
   {
     id: '35_character',
+    type: 'character',
     familyId: null,
     regionId: '6_region',
     name: 'Petyr Baelish',
@@ -280,6 +311,7 @@ export default [
   },
   {
     id: '36_character',
+    type: 'character',
     familyId: null,
     regionId: '7_region',
     name: 'Brienne of Tarth',
@@ -289,6 +321,7 @@ export default [
   },
   {
     id: '37_character',
+    type: 'character',
     familyId: null,
     regionId: '6_region',
     name: 'Bronn',
@@ -298,6 +331,7 @@ export default [
   },
   {
     id: '37_character',
+    type: 'character',
     familyId: null,
     regionId: '10_region',
     name: 'Mance Rayder',
@@ -307,6 +341,7 @@ export default [
   },
   {
     id: '38_character',
+    type: 'character',
     familyId: null,
     regionId: '1_region',
     name: 'Jon Snow',
@@ -316,6 +351,7 @@ export default [
   },
   {
     id: '39_character',
+    type: 'character',
     familyId: null,
     regionId: '1_region',
     name: 'Ramsey Snow',
@@ -325,6 +361,7 @@ export default [
   },
   {
     id: '40_character',
+    type: 'character',
     familyId: null,
     regionId: '1_region',
     name: 'Samwell Tarly',
@@ -334,6 +371,7 @@ export default [
   },
   {
     id: '41_character',
+    type: 'character',
     familyId: null,
     regionId: '10_region',
     name: 'Tormund',
@@ -343,6 +381,7 @@ export default [
   },
   {
     id: '42_character',
+    type: 'character',
     familyId: null,
     regionId: '10_region',
     name: 'Orell',
@@ -352,6 +391,7 @@ export default [
   },
   {
     id: '43_character',
+    type: 'character',
     familyId: null,
     regionId: '10_region',
     name: 'Ygritte',

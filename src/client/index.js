@@ -5,7 +5,7 @@ import React from 'react';
 import {render} from 'react-dom';
 import Westeros from './screens/Westeros/index.jsx';
 import Relay, {RootContainer, Route} from 'react-relay';
-import {Viewer} from 'core/routes.js';
+import {Regions} from 'core/routes.js';
 
 require('./index.less');
 
@@ -14,7 +14,7 @@ if (__DEVELOPMENT__) {
 }
 
 render(
-  <RootContainer route={new Viewer()} Component={Westeros} />,
+  <RootContainer route={new Regions()} Component={Westeros} />,
   document.getElementById('app'));
 
 

@@ -9,6 +9,12 @@ export const viewer = () => Relay.QL`
   }
 `;
 
+export const regions = () => Relay.QL`
+  query {
+    regions
+  }
+`;
+
 export const family = (Component, {regionId}) => Relay.QL`
   query {
     family(regionId: $regionId) {

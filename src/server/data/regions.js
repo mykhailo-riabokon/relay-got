@@ -4,6 +4,7 @@
 export default [
   {
     id: '1_region',
+    type: 'region',
     name: 'The North',
     rulers: 'House Stark',
     capital: 'Winterfell',
@@ -12,6 +13,7 @@ export default [
   },
   {
     id: '2_region',
+    type: 'region',
     name: 'The Vale of Arryn',
     rulers: 'House Arryn',
     capital: 'The Eyrie',
@@ -20,6 +22,7 @@ export default [
   },
   {
     id: '3_region',
+    type: 'region',
     name: 'The Riverlands',
     rulers: 'House Tully',
     capital: 'Riverrun',
@@ -28,6 +31,7 @@ export default [
   },
   {
     id: '4_region',
+    type: 'region',
     name: 'The Westerlands',
     rulers: 'House Lannister',
     capital: 'Casterly Rock',
@@ -36,6 +40,7 @@ export default [
   },
   {
     id: '5_region',
+    type: 'region',
     name: 'The Iron Islands',
     rulers: 'House Greyjoy',
     capital: 'Pyke',
@@ -44,6 +49,7 @@ export default [
   },
   {
     id: '6_region',
+    type: 'region',
     name: 'The Crownlands',
     rulers: 'The King on the Iron Throne',
     capital: 'King\'s Landing',
@@ -52,6 +58,7 @@ export default [
   },
   {
     id: '7_region',
+    type: 'region',
     name: 'The Stormlands',
     rulers: 'House Baratheon',
     capital: 'Storm\'s End',
@@ -60,6 +67,7 @@ export default [
   },
   {
     id: '8_region',
+    type: 'region',
     name: 'The Reach',
     rulers: 'House Tyrell',
     capital: 'Highgarden',
@@ -68,6 +76,7 @@ export default [
   },
   {
     id: '9_region',
+    type: 'region',
     name: 'Dorne',
     rulers: 'House Martell',
     capital: 'Sunspear',
@@ -76,6 +85,7 @@ export default [
   },
   {
     id: '10_region',
+    type: 'region',
     name: 'Beyond the Wal',
     rulers: 'King-Beyond-the-Wall',
     capital: null,

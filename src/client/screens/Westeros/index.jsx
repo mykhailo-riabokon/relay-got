@@ -48,7 +48,7 @@ export class Westeros extends Component {
     return (
       <div className="westeros">
         <h1 className="header">Westeros</h1>
-        <List className="regions" data={this.props.viewer.regions} renderItemMethod={this.getRegion}/>
+        <List className="regions" data={this.props.regions.list} renderItemMethod={this.getRegion}/>
         <Modal onRequestClose={this.hideModal} isOpen={this.state.showModal}>{this.state.modalContent}</Modal>
       </div>
     );
@@ -57,9 +57,9 @@ export class Westeros extends Component {
 
 export default Relay.createContainer(Westeros, {
   fragments: {
-    viewer: () => Relay.QL`
-      fragment on Viewer {
-        regions {
+    regions: () => Relay.QL`
+      fragment on Regions {
+        list {
           ${Region.getFragment('region')}
         }
       }

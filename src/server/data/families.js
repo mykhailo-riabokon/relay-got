@@ -12,6 +12,7 @@
 export default [
   {
     id: '1_family',
+    type: 'family',
     name: 'Stark',
     regionId: '1_region',
     words: 'Winter is Coming',
@@ -19,6 +20,7 @@ export default [
   },
   {
     id: '2_family',
+    type: 'family',
     name: 'Arryn',
     regionId: '2_region',
     words: 'As High as Honor',
@@ -26,6 +28,7 @@ export default [
   },
   {
     id: '3_family',
+    type: 'family',
     name: 'Tully',
     regionId: '3_region',
     words: 'Family, Duty, Honor',
@@ -33,6 +36,7 @@ export default [
   },
   {
     id: '4_family',
+    type: 'family',
     name: 'Lannister',
     regionId: '4_region',
     words: 'A Lannister Always Pays His Debts',
@@ -40,6 +44,7 @@ export default [
   },
   {
     id: '5_family',
+    type: 'family',
     name: 'Greyjoy',
     regionId: '5_region',
     words: 'We Do Not Sow',
@@ -47,6 +52,7 @@ export default [
   },
   {
     id: '6_family',
+    type: 'family',
     name: 'Baratheon',
     regionId: '7_region',
     words: 'Ours is the Fury',

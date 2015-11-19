@@ -9,15 +9,23 @@ import {
   GraphQLNonNull,
   GraphQLID
 } from 'graphql';
+import {globalIdField} from 'graphql-relay';
+import {nodeInterface} from '../graphqlRelay.js';
 
 const regionType = new GraphQLObjectType({
   name: 'Region',
   descriptions: 'Regions of Seven Kingdoms',
+  isTypeOf: (obj) => {
+    let {type} = obj;
+
+    if (type && type.toLocaleLowerCase) {
+      type = type.toLocaleLowerCase();
+    }
+
+    return type  === 'region';
+  },
   fields: () => ({
-    id: {
-      type: new GraphQLNonNull(GraphQLID),
-      description: 'The id of the object.',
-    },
+    id: globalIdField('Region'),
     name: {
       type: GraphQLString
     },
@@ -33,7 +41,8 @@ const regionType = new GraphQLObjectType({
     bastardSurname: {
       type: GraphQLString
     }
-  })
+  }),
+  interfaces: [nodeInterface]
 });
 
 export default regionType;
