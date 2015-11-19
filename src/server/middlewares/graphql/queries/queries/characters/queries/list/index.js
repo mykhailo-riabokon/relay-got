@@ -1,12 +1,9 @@
 /**
  * Created by mikhail on 19.11.15.
  */
-/**
- * Created by mikhail on 19.11.15.
- */
 import {GraphQLList, GraphQLID} from 'graphql';
-import character from '../../../../types/character.js';
-import data from '../../../../../../data/regions.js';
+import character from '../../../../../types/character.js';
+import data from '../../../../../../../data/characters.js';
 
 export default {
   type: new GraphQLList(character),
