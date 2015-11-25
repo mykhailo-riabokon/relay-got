@@ -7,19 +7,23 @@
     "update-schema": "babel-node ./scripts/updateSchema.js",
     "webpack": "babel-node ./scripts/webpack/index.js",
     "dev": "npm run update-schema && HOT=1 NODE_ENV=development npm run webpack && HOT=1 NODE_ENV=development nodemon ./index.js",
-    "start": "npm run update-schema && NODE_ENV=production npm run webpack && NODE_ENV=production node ./index.js"
+    "postinstall": "npm run update-schema && NODE_ENV=production npm run webpack",
+    "start": "NODE_ENV=production node ./index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mikhail-riabokon/relay-got.git"
   },
   "keywords": [
+    "JavasScript",
+    "ES6",
     "Relay",
     "GraphQL",
+    "NodeJS",
     "express"
   ],
   "author": "Mikhail Riabokon",
-  "license": "ISC",
+  "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/mikhail-riabokon/relay-got/issues"
   },
