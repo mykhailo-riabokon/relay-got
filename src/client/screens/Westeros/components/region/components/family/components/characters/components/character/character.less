@@ -6,10 +6,22 @@
 @character-height: @character__photo-height + @character__name-height;
 @character-width: @character__photo-width;
 
+.no-select {
+  webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
 .character {
   width: @character-width;
   height: @character-height;
   margin: 15px 10px;
+  cursor: pointer;
+  .no-select;
   .character__photo {
     height: @character__photo-height;
     width: @character__photo-width;

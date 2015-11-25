@@ -409,11 +409,11 @@ export function getData() {
   return data.toJS();
 }
 
-export function reviveCharacter(id) {
+export function toggleCharacter(id, kill) {
   let index = data.findIndex(item => item.get('id') === id);
   let character = data.get(index);
 
-  character = character.set('isDead', false);
+  character = character.set('isDead', kill);
 
   data = data.set(index, character);
 

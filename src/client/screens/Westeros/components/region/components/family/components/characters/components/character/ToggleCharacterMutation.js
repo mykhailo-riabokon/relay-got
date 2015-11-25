@@ -3,18 +3,21 @@
  */
 import Relay, {Mutation} from 'react-relay';
 
-class ReviveCharacterMutation extends Mutation {
+class ToggleCharacterMutation extends Mutation {
   getMutation() {
     return Relay.QL`
       mutation {
-        reviveCharacter
+        toggleCharacter
       }
     `;
   }
 
   getVariables() {
+    let {kill, characterId} = this.props;
+
     return {
-      characterId: this.props.characterId
+      characterId,
+      kill
     };
   }
 
@@ -31,11 +34,11 @@ class ReviveCharacterMutation extends Mutation {
 
   getFatQuery() {
     return Relay.QL`
-      fragment on ReviveCharacterPayload {
+      fragment on ToggleCharacterPayload {
         characters
       }
     `;
   }
 }
 
-export default ReviveCharacterMutation;
+export default ToggleCharacterMutation;
