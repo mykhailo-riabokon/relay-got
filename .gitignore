@@ -1,6 +1,8 @@
 .idea
 npm-debug.log
 node_modules
-assets
+assets/*
+!src/assets/images/
+.DS_Store
 **/schema.graphql
 **/schema.json
