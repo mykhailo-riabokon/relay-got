@@ -11,15 +11,10 @@ const REGIONS = 'Regions';
 export default {
   type: new GraphQLObjectType({
     name: REGIONS,
-    isTypeOf: (obj) => {
-      console.log(obj.id)
-
-      return (obj.id === REGIONS);
-    },
+    isTypeOf: (obj) => (obj.id === REGIONS),
     description: 'Regions of Westeros',
     fields: () => ({
-      id: globalIdField('Regions')
-      ,
+      id: globalIdField('Regions'),
       list: list
     }),
     interfaces: [nodeInterface]

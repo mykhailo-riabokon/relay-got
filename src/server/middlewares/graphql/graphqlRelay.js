@@ -4,14 +4,7 @@
 import {nodeDefinitions, fromGlobalId} from 'graphql-relay';
 
 let {nodeInterface, nodeField} = nodeDefinitions(
-  (globalId) => {
-    var {type, id} = fromGlobalId(globalId);
-
-    console.log('id', globalId);
-
-
-    return {type, id};
-  }
+  (globalId) => fromGlobalId(globalId)
 );
 
 export {nodeInterface, nodeField};

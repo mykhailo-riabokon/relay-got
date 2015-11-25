@@ -34,10 +34,6 @@ export default {
       }, []);
     }
 
-
-    console.log(result.length);
-
-
     return result;
   }
 }
