@@ -4,7 +4,7 @@
 import {GraphQLList, GraphQLID} from 'graphql';
 import {fromGlobalId} from 'graphql-relay';
 import character from '../../../../../types/character.js';
-import data from '../../../../../../../data/characters.js';
+import {getData} from '../../../../../../../data/characters.js';
 
 export default {
   type: new GraphQLList(character),
@@ -21,18 +21,22 @@ export default {
   },
   resolve: (rootValue, args) => {
     let filterKeys = Object.keys(args);
-    let result = data;
+    let result = getData();
 
     if (filterKeys.length) {
       result = filterKeys.reduce((memo, filterKey) => {
         return memo.concat(result.filter(character => {
           let existed = memo.find(record => record.id === character.id);
-          let {id} = fromGlobalId(args[filterKey])
+          let {id} = fromGlobalId(args[filterKey]);
 
           return !existed && character[filterKey] === id;
         }));
       }, []);
     }
+
+
+    console.log(result.length);
+
 
     return result;
   }

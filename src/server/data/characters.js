@@ -1,4 +1,6 @@
-export default [
+import Immutable from 'immutable';
+
+const originData = Immutable.fromJS([
   {
     id: '1_character',
     type: 'character',
@@ -399,4 +401,21 @@ export default [
     status: null,
     photo: '/assets/images/characters/ygritte-512x512.jpg'
   }
-];
+]);
+
+let data = Immutable.fromJS(originData.toJS());
+
+export function getData() {
+  return data.toJS();
+}
+
+export function reviveCharacter(id) {
+  let index = data.findIndex(item => item.get('id') === id);
+  let character = data.get(index);
+
+  character = character.set('isDead', false);
+
+  data = data.set(index, character);
+
+  return data;
+}

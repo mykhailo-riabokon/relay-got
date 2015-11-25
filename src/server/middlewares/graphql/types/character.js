@@ -26,12 +26,8 @@ const characterType = new GraphQLObjectType({
   },
   fields: () => ({
     id: globalIdField('Character'),
-    familyId: {
-      type: GraphQLID
-    },
-    regionId: {
-      type: GraphQLID
-    },
+    familyId: globalIdField('Family', (obj) => obj.familyId),
+    regionId: globalIdField('Region', (obj) => obj.regionId),
     name: {
       type: GraphQLString
     },

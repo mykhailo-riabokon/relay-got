@@ -6,7 +6,7 @@ import {globalIdField} from 'graphql-relay';
 import {nodeInterface} from '../../../graphqlRelay.js';
 import list from './queries/list';
 
-const CHARACTERS = 'Characters';
+export const CHARACTERS = 'Characters';
 
 export default {
   type: new GraphQLObjectType({

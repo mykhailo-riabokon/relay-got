@@ -23,9 +23,7 @@ const familyType = new GraphQLObjectType({
   },
   fields: () => ({
     id: globalIdField('Family'),
-    regionId: {
-      type: GraphQLID
-    },
+    regionId: globalIdField('Region', (obj) => obj.regionId),
     name: {
       type: GraphQLString
     },
