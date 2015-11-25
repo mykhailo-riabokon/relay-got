@@ -2,7 +2,7 @@
  * Created by mikhail on 25.11.15.
  */
 import {GraphQLNonNull, GraphQLString} from 'graphql';
-import {mutationWithClientMutationId} from 'graphql-relay';
+import {mutationWithClientMutationId, fromGlobalId} from 'graphql-relay';
 import characters from '../queries/queries/characters';
 import {reviveCharacter} from '../../../data/characters.js';
 
@@ -19,7 +19,7 @@ export default mutationWithClientMutationId({
   },
   mutateAndGetPayload({characterId}) {
     let {id} = fromGlobalId(characterId);
-
+    
     // revive in list
     reviveCharacter(id);
 
