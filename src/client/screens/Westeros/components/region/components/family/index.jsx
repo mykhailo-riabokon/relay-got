@@ -1,8 +1,8 @@
 import React, {Component, PropTypes} from 'react';
 import Relay from 'react-relay';
 import {RootContainer} from 'react-relay';
-import {MembersRoute} from 'core/routes.js';
-import Members from './components/members/index.jsx';
+import {CharactersRoute} from 'core/routes.js';
+import Characters from './components/characters/index.jsx';
 
 require('./family.less');
 
@@ -12,7 +12,7 @@ export class Family extends Component {
     relay: PropTypes.object.isRequired
   };
 
-  getRullerFamily() {
+  get rullerFamily() {
     let {name, words, coatOfArms} = this.props.family;
     let style = {
       backgroundImage: `url(${coatOfArms})`
@@ -35,16 +35,15 @@ export class Family extends Component {
 
   render() {
     let {family} = this.props;
-
-    let memberRoute = new MembersRoute({
+    let charactersRoute = new CharactersRoute({
       familyId: family && family.id || '',
       regionId: this.props.relay.variables.regionId
     });
 
     return (
       <div className="family-container">
-        {family && this.getRullerFamily()}
-        <RootContainer Component={Members} route={memberRoute}/>
+        {family && this.rullerFamily}
+        <RootContainer Component={Characters} route={charactersRoute}/>
       </div>
     );
   }

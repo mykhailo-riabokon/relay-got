@@ -2,6 +2,7 @@
  * Created by mikhail on 11.11.15.
  */
 import {GraphQLString, GraphQLNonNull} from 'graphql';
+import {fromGlobalId} from 'graphql-relay';
 import familyType from '../../../types/family.js';
 import data from '../../../../../data/families.js';
 
@@ -13,6 +14,8 @@ export default {
     }
   },
   resolve: (_, {regionId}) => {
-    return data.find(item => item.regionId === regionId) || {};
+    let {id} = fromGlobalId(regionId);
+
+    return data.find(item => item.regionId === id) || {};
   }
 }

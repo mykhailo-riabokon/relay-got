@@ -1,11 +1,11 @@
 import React, {PropTypes, Component} from 'react';
 import Relay from 'react-relay';
 
-require('./member.less');
+require('./character.less');
 
-export class Member extends Component {
+export class Character extends Component {
   render() {
-    let {name, photo, isDead} = this.props.member;
+    let {name, photo, isDead} = this.props.character;
     let style = {
       backgroundImage: `url(${photo})`
     };
@@ -20,9 +20,9 @@ export class Member extends Component {
   }
 }
 
-export default Relay.createContainer(Member, {
+export default Relay.createContainer(Character, {
   fragments: {
-    member: () => Relay.QL`
+    character: () => Relay.QL`
       fragment on Character {
         id
         name,

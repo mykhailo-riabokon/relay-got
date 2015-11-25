@@ -3,14 +3,7 @@
  */
 import React from 'react';
 import Relay, {Route} from 'react-relay';
-import {viewer, family, members, regions} from './queries.js';
-
-export class Viewer extends Route {
-  static routeName = 'Viewer';
-  static queries = {
-    viewer
-  };
-}
+import {family, characters, regions} from './queries.js';
 
 export class FamilyRoute extends Route {
   static routeName = 'Family';
@@ -19,10 +12,10 @@ export class FamilyRoute extends Route {
   }
 }
 
-export class MembersRoute extends Route {
-  static routeName = 'Members';
+export class CharactersRoute extends Route {
+  static routeName = 'Characters';
   static queries = {
-    members
+    characters
   }
 }
 
