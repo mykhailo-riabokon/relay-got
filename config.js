@@ -13,5 +13,3 @@ export const srcAssetsPath = path.join(sourcePath, 'assets');
 export const distAssetsPath = path.join(__dirname, 'assets');
 export const clientSourcePath = path.join(sourcePath, 'client');
 export const jsOutputPath = path.join(distAssetsPath, 'js');
-
-
