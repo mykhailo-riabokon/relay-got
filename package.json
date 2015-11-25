@@ -1,6 +1,6 @@
 {
   "name": "relay-got",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Relay example in Game of Thrones subject",
   "main": "index.js",
   "scripts": {
