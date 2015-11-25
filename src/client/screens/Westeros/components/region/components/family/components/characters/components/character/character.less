@@ -1,0 +1,44 @@
+@character__name-height: 30px;
+
+@character__photo-height: 200px;
+@character__photo-width: @character__photo-height;
+
+@character-height: @character__photo-height + @character__name-height;
+@character-width: @character__photo-width;
+
+.character {
+  width: @character-width;
+  height: @character-height;
+  margin: 15px 10px;
+  .character__photo {
+    height: @character__photo-height;
+    width: @character__photo-width;
+    background-color: #000;
+    background-size: cover;
+  }
+  .character__name {
+    color: #fff;
+    text-align: center;
+    height: @character__name-height;
+    line-height: @character__name-height;
+  }
+}
+.character--dead {
+  .character__photo {
+    position: relative;
+    &:before {
+      position: relative;
+      top: -2px;
+      content: 'X';
+      width: @character__photo-width;
+      height: @character__photo-height;
+      font-size: @character__photo-height;
+      display: block;
+      text-align: center;
+      color: #ff0000;
+    }
+  }
+  .member__name {
+    color: #ff0000;
+  }
+}

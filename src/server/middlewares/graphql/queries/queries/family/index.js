@@ -15,7 +15,10 @@ export default {
   },
   resolve: (_, {regionId}) => {
     let {id} = fromGlobalId(regionId);
+    let defaultRes = {
+      type: 'family'
+    };
 
-    return data.find(item => item.regionId === id) || {};
+    return data.find(item => item.regionId === id) || defaultRes;
   }
 }

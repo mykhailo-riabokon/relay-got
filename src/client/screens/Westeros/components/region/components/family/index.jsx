@@ -39,10 +39,10 @@ export class Family extends Component {
       familyId: family && family.id || '',
       regionId: this.props.relay.variables.regionId
     });
-
+    
     return (
       <div className="family-container">
-        {family && this.rullerFamily}
+        {family.name && this.rullerFamily}
         <RootContainer Component={Characters} route={charactersRoute}/>
       </div>
     );

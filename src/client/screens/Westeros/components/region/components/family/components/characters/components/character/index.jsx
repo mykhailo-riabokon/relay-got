@@ -9,12 +9,12 @@ export class Character extends Component {
     let style = {
       backgroundImage: `url(${photo})`
     };
-    let classes = `member ${isDead ? 'dead': ''}`;
+    let classes = `character ${isDead ? 'character--dead': ''}`;
 
     return (
       <div className={classes}>
-        <div className="member__photo" style={style}></div>
-        <div className="member__name">{name}</div>
+        <div className="character__photo" style={style}></div>
+        <div className="character__name">{name}</div>
       </div>
     );
   }
