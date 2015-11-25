@@ -7,6 +7,9 @@ let {nodeInterface, nodeField} = nodeDefinitions(
   (globalId) => {
     var {type, id} = fromGlobalId(globalId);
 
+    console.log('id', globalId);
+
+
     return {type, id};
   }
 );

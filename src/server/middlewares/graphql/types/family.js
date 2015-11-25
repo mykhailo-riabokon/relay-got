@@ -19,7 +19,7 @@ const familyType = new GraphQLObjectType({
       type = type.toLocaleLowerCase();
     }
 
-    return type  === 'family';
+    return type === 'family';
   },
   fields: () => ({
     id: globalIdField('Family'),
