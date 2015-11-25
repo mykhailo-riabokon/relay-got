@@ -86,7 +86,7 @@ export default [
   {
     id: '10_region',
     type: 'region',
-    name: 'Beyond the Wal',
+    name: 'Beyond the Wall',
     rulers: 'King-Beyond-the-Wall',
     capital: null,
     religion: 'The Old Gods of the Forest',
