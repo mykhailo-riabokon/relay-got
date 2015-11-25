@@ -14,9 +14,9 @@ export class Characters extends Component {
       characters: []
     }
   };
-  getCharacter(character, index) {
-    return <Character character={character} key={index} />;
-  }
+  getCharacter = (character, index) => {
+    return <Character charactersId={this.props.characters.id} character={character} key={index} />;
+  };
   render() {
     return (
       <div className="characters-container">
@@ -36,6 +36,7 @@ export default Relay.createContainer(Characters, {
   fragments: {
     characters: () => Relay.QL`
       fragment on Characters {
+        id,
         list(familyId: $familyId, regionId: $regionId) {
           ${Character.getFragment('character')}
         }

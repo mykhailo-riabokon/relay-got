@@ -19,7 +19,7 @@ export default mutationWithClientMutationId({
   },
   mutateAndGetPayload({characterId}) {
     let {id} = fromGlobalId(characterId);
-    
+
     // revive in list
     reviveCharacter(id);
 
