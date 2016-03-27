@@ -3,6 +3,8 @@
 This example shows how to fetch and mutate data via react-relay on client and graphql-relay on server.
 Data was taken from Game of Thrones world.
 
+[Presentation (Ru) ](https://www.youtube.com/watch?v=CePdnxcnnCA)
+
 # Notes
 [Example](http://relay-got.herokuapp.com/) is **not** cross platform. I chacked it only in latest Chrome.
 ## DEVELOPMENT for WINDOWS users
