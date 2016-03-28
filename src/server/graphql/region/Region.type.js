@@ -1,6 +1,3 @@
-/**
- * Created by mikhail on 19.11.15.
- */
 import {
   GraphQLObjectType,
   GraphQLInt,
@@ -10,20 +7,20 @@ import {
   GraphQLID
 } from 'graphql';
 import {globalIdField} from 'graphql-relay';
-import {nodeInterface} from '../graphqlRelay.js';
+// import {nodeInterface} from '../graphqlRelay.js';
 
-const regionType = new GraphQLObjectType({
+export default new GraphQLObjectType({
   name: 'Region',
   descriptions: 'Regions of Seven Kingdoms',
-  isTypeOf: (obj) => {
-    let {type} = obj;
-
-    if (type && type.toLocaleLowerCase) {
-      type = type.toLocaleLowerCase();
-    }
-
-    return type  === 'region';
-  },
+  // isTypeOf: (obj) => {
+  //   let {type} = obj;
+  //
+  //   if (type && type.toLocaleLowerCase) {
+  //     type = type.toLocaleLowerCase();
+  //   }
+  //
+  //   return type  === 'region';
+  // },
   fields: () => ({
     id: globalIdField('Region'),
     name: {
@@ -41,8 +38,7 @@ const regionType = new GraphQLObjectType({
     bastardSurname: {
       type: GraphQLString
     }
-  }),
-  interfaces: [nodeInterface]
+  })
+  // ,
+  // interfaces: [nodeInterface]
 });
-
-export default regionType;

@@ -1,7 +1,6 @@
-/**
- * Created by mikhail on 14.11.15.
- */
-export default [
+import Immutable from 'immutable';
+
+export default Immutable.fromJS([
   {
     id: '1_region',
     type: 'region',
@@ -92,4 +91,4 @@ export default [
     religion: 'The Old Gods of the Forest',
     bastardSurname: 'Sand'
   }
-];
+]);
