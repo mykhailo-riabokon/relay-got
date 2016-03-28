@@ -4,7 +4,7 @@
 import {GraphQLList, GraphQLID} from 'graphql';
 import {fromGlobalId} from 'graphql-relay';
 import character from '../../../../../types/character.js';
-import {getData} from '../../../../../../../data/characters.js';
+import {getData} from '../../../../../../data/characters.js';
 
 export default {
   type: new GraphQLList(character),

@@ -2,11 +2,11 @@
  * Created by mikhail on 19.11.15.
  */
 import {GraphQLList, GraphQLID} from 'graphql';
-import family from '../../../../../types/family.js';
-import data from '../../../../../../../data/families.js';
+import region from '../../../../../types/region.js';
+import data from '../../../../../../data/regions.js';
 
 export default {
-  type: new GraphQLList(family),
+  type: new GraphQLList(region),
   args: {
     id: {
       type: GraphQLID
@@ -16,7 +16,7 @@ export default {
     let result = data;
 
     if (id) {
-      result = result.filter(family => family.id === id);
+      result = result.filter(region => region.id === id);
     }
 
     return result;

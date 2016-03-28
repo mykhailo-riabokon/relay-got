@@ -1,6 +1,3 @@
-/**
- * Created by mikhail on 31.10.15.
- */
 import {GraphQLSchema, GraphQLObjectType} from 'graphql';
 import * as queries from './queries';
 import * as mutations from './mutations';
