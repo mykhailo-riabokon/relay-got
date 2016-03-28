@@ -28,22 +28,69 @@ export function getEntries() {
   return result;
 }
 
+export function getBabelConfig() {
+  // const result = [
+  //   {
+  //     query: {
+  //       presets: [
+  //         'es2015',
+  //         'stage-0',
+  //         'react',
+  //       ],
+  //       plugins: [
+  //         path.join(__dirname, 'babelRelayPlugin.js'),
+  //       ],
+  //     },
+  //   },
+  // ];
+  //
+  // if (__HOT__) {
+  //   result[0].query.plugins.push('react-transform');
+  //   result[0].query.extra = {
+  //     "react-transform": {
+  //       "transforms": [{
+  //         "transform": "react-transform-hmr",
+  //         "imports": ["react"],
+  //         "locals": ["module"]
+  //       }]
+  //     }
+  //   };
+  // }
+  //
+  // return result;
+
+  const config = {
+    passPerPreset: true,
+    plugins: [
+      path.join(__dirname, 'babelRelayPlugin.js')
+    ],
+    presets: [
+      'react',
+      'es2015',
+      'stage-0',
+    ],
+  };
+
+  if (process.env.HOT) {
+    config.plugins.push(['react-transform', {
+      transforms: [{
+        transform: 'react-transform-hmr',
+        imports: ['react'],
+        locals: ['module'],
+      }],
+    }]);
+  }
+
+  return config;
+}
+
 export function getLoaders() {
-  let result = [
+  return [
     {
       test: /(\.js$|\.jsx$)/,
       loader: 'babel',
       exclude: /node_modules/,
-      include: [
-        clientSourcePath
-      ]
-      // ,
-      // query: {
-      //   stage: 0,
-      //   plugins: [
-      //     path.join(__dirname, 'babelRelayPlugin.js')
-      //   ]
-      // }
+      include: [ clientSourcePath ],
     },
     {
       test: /\.less$/,
@@ -54,21 +101,6 @@ export function getLoaders() {
       loader: 'url-loader?limit=8192'
     }
   ];
-
-  if (__HOT__) {
-    result[0].query.plugins.push('react-transform');
-    result[0].query.extra = {
-      "react-transform": {
-        "transforms": [{
-          "transform": "react-transform-hmr",
-          "imports": ["react"],
-          "locals": ["module"]
-        }]
-      }
-    };
-  }
-
-  return result;
 }
 
 export function getPlugins() {

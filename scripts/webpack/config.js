@@ -12,9 +12,10 @@ let config = {
     publicPath: '/assets/js/'
   },
   module: {
-    loaders: helpers.getLoaders()
+    loaders: helpers.getLoaders(),
   },
   plugins: helpers.getPlugins(),
+  babel: helpers.getBabelConfig(),
   progress: true,
   resolve: {
     modulesDirectories: ['node_modules', './src/client/shared'],

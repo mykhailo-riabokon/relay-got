@@ -14,7 +14,7 @@ if (__HOT__) {
   let webpackHotMiddleware = require('./middlewares/webpackHot');
 
   app.use(webpackDevMiddleware.default);
-  app.use(webpackHotMiddleware);
+  app.use(webpackHotMiddleware.default);
 }
 
 app.set('views', path.resolve(__dirname, 'views'));
