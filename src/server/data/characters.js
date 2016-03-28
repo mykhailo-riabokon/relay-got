@@ -1,6 +1,6 @@
 import Immutable from 'immutable';
 
-const originData = Immutable.fromJS([
+export default Immutable.fromJS([
   {
     id: '1_character',
     type: 'character',
@@ -403,19 +403,19 @@ const originData = Immutable.fromJS([
   }
 ]);
 
-let data = Immutable.fromJS(originData.toJS());
-
-export function getData() {
-  return data.toJS();
-}
-
-export function toggleCharacter(id, kill) {
-  let index = data.findIndex(item => item.get('id') === id);
-  let character = data.get(index);
-
-  character = character.set('isDead', kill);
-
-  data = data.set(index, character);
-
-  return data;
-}
+// let data = Immutable.fromJS(originData.toJS());
+//
+// export function getData() {
+//   return data.toJS();
+// }
+//
+// export function toggleCharacter(id, kill) {
+//   let index = data.findIndex(item => item.get('id') === id);
+//   let character = data.get(index);
+//
+//   character = character.set('isDead', kill);
+//
+//   data = data.set(index, character);
+//
+//   return data;
+// }
