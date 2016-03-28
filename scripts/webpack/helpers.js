@@ -36,13 +36,14 @@ export function getLoaders() {
       exclude: /node_modules/,
       include: [
         clientSourcePath
-      ],
-      query: {
-        stage: 0,
-        plugins: [
-          path.join(__dirname, 'babelRelayPlugin.js')
-        ]
-      }
+      ]
+      // ,
+      // query: {
+      //   stage: 0,
+      //   plugins: [
+      //     path.join(__dirname, 'babelRelayPlugin.js')
+      //   ]
+      // }
     },
     {
       test: /\.less$/,
