@@ -1,7 +1,6 @@
-/**
- * Created by mikhail on 11.11.15.
- */
-export default [
+import Immutable from 'immutable';
+
+export default Immutable.fromJS([
   {
     id: '1_family',
     type: 'family',
@@ -50,4 +49,4 @@ export default [
     words: 'Ours is the Fury',
     coatOfArms: '/assets/images/coatOfArms/Baratheon_sig.png'
   }
-]
+]);
