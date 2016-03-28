@@ -1,13 +1,9 @@
-/**
- * Created by mikhail on 01.11.15.
- */
 import React, {PropTypes, Component} from 'react';
 import Relay from 'react-relay';
 import Region from './components/region/index.jsx';
 import List from 'components/List.jsx';
 import Modal from 'components/Modal.jsx';
-
-require('./westeros.less');
+import './westeros.less'
 
 export class Westeros extends Component {
   static propTypes = {
@@ -16,6 +12,7 @@ export class Westeros extends Component {
   static childContextTypes = {
     showModal: PropTypes.func
   };
+
   state = {
     showModal: false,
     modalContent: null
@@ -44,6 +41,7 @@ export class Westeros extends Component {
   getRegion(region, index) {
     return <Region key={index} region={region}/>
   }
+  
   render() {
     return (
       <div className="westeros">

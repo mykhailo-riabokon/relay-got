@@ -1,15 +1,15 @@
 import React, {PropTypes, Component} from 'react';
 import Relay from 'react-relay';
 import ToggleCharacterMutation from './ToggleCharacterMutation.js';
-
-require('./character.less');
+import './character.less';
 
 export class Character extends Component {
   static propTypes = {
     character: PropTypes.object
   };
+
   reviveCharacter = () => {
-    let {id, isDead} = this.props.character;
+    const {id, isDead} = this.props.character;
 
     Relay.Store.update(new ToggleCharacterMutation({
       characterId: id,
@@ -26,11 +26,11 @@ export class Character extends Component {
   };
 
   render() {
-    let {name, photo, isDead} = this.props.character;
-    let style = {
+    const {name, photo, isDead} = this.props.character;
+    const style = {
       backgroundImage: `url(${photo})`
     };
-    let classes = `character ${isDead ? 'character--dead': ''}`;
+    const classes = `character ${isDead ? 'character--dead': ''}`;
 
     return (
       <div className={classes} onClick={this.reviveCharacter}>

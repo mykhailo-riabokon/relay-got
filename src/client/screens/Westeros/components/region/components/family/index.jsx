@@ -3,8 +3,7 @@ import Relay from 'react-relay';
 import {RootContainer} from 'react-relay';
 import {CharactersRoute} from 'core/routes.js';
 import Characters from './components/characters/index.jsx';
-
-require('./family.less');
+import './family.less';
 
 export class Family extends Component {
   static propTypes = {
@@ -13,8 +12,8 @@ export class Family extends Component {
   };
 
   get rullerFamily() {
-    let {name, words, coatOfArms} = this.props.family;
-    let style = {
+    const {name, words, coatOfArms} = this.props.family;
+    const style = {
       backgroundImage: `url(${coatOfArms})`
     };
 
@@ -34,8 +33,8 @@ export class Family extends Component {
   }
 
   render() {
-    let {family} = this.props;
-    let charactersRoute = new CharactersRoute({
+    const {family} = this.props;
+    const charactersRoute = new CharactersRoute({
       familyId: family && family.id || '',
       regionId: this.props.relay.variables.regionId
     });

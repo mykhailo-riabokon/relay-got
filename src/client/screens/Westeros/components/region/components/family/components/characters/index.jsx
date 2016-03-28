@@ -2,8 +2,7 @@ import React, {PropTypes, Component} from 'react';
 import Relay from 'react-relay';
 import List from 'components/List.jsx';
 import Character from './components/character/index.jsx';
-
-require('./characters.less');
+import './characters.less';
 
 export class Characters extends Component {
   static propTypes = {
@@ -14,9 +13,11 @@ export class Characters extends Component {
       characters: []
     }
   };
+
   getCharacter = (character, index) => {
     return <Character charactersId={this.props.characters.id} character={character} key={index} />;
   };
+
   render() {
     return (
       <div className="characters-container">

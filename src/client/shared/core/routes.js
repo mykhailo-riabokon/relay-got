@@ -1,6 +1,3 @@
-/**
- * Created by mikhail on 09.11.15.
- */
 import React from 'react';
 import Relay, {Route} from 'react-relay';
 import {family, characters, regions} from './queries.js';

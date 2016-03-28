@@ -1,6 +1,3 @@
-/**
- * Created by mikhail on 25.11.15.
- */
 import Relay, {Mutation} from 'react-relay';
 
 class ToggleCharacterMutation extends Mutation {
@@ -13,7 +10,7 @@ class ToggleCharacterMutation extends Mutation {
   }
 
   getVariables() {
-    let {kill, characterId} = this.props;
+    const {kill, characterId} = this.props;
 
     return {
       characterId,

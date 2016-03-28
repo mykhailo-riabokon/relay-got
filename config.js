@@ -1,6 +1,3 @@
-/**
- * Created by mikhail on 26.10.15.
- */
 import path from 'path';
 
 export const port = process.env.PORT || 3000;

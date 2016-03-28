@@ -1,29 +1,23 @@
-/**
- * Created by mikhail on 02.11.15.
- */
 import React, {PropTypes, Component} from 'react';
 import Relay, {RootContainer, Route} from 'react-relay';
 import Family from './components/family/index.jsx';
 import {FamilyRoute} from 'core/routes.js';
-
-require('./region.less');
+import './region.less';
 
 export class Region extends Component {
   static propTypes = {
     region: PropTypes.object
   };
+
   static contextTypes = {
     showModal: PropTypes.func
   };
+
   showRegion = () => {
-    let route = new FamilyRoute({
-      regionId: this.props.region.id
-    });
+    const route = new FamilyRoute({ regionId: this.props.region.id });
 
     this.context.showModal(
-      <RootContainer
-        route={route}
-        Component={Family}/>
+      <RootContainer route={route} Component={Family}/>
     );
   };
   get className() {

@@ -1,6 +1,3 @@
-/**
- * Created by mikhail on 02.11.15.
- */
 import React, {PropTypes, Component} from 'react';
 
 class List extends Component {
@@ -17,9 +14,9 @@ class List extends Component {
 
   render() {
     return (
-        <div className={this.props.className}>
-          {this.props.data.map((...args) => this.props.renderItemMethod(...args))}
-        </div>
+      <div className={this.props.className}>
+        {this.props.data.map((...args) => this.props.renderItemMethod(...args))}
+      </div>
     );
   }
 }
