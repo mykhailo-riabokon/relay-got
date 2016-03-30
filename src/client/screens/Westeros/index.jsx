@@ -1,9 +1,9 @@
 import React, {PropTypes, Component} from 'react';
 import Relay from 'react-relay';
-import Region from './components/region/index.jsx';
+import Region from './components/Region';
 import List from 'components/List.jsx';
 import Modal from 'components/Modal.jsx';
-import './westeros.less'
+import './index.less';
 
 export class Westeros extends Component {
   static propTypes = {
@@ -39,25 +39,26 @@ export class Westeros extends Component {
   }
 
   getRegion(region, index) {
-    return <Region key={index} region={region}/>
+    return <Region key={index} region={region}/>;
   }
-  
+
   render() {
     return (
       <div className="westeros">
         <h1 className="header">Westeros</h1>
-        <List className="regions" data={this.props.regions.list} renderItemMethod={this.getRegion}/>
-        <Modal onRequestClose={this.hideModal} isOpen={this.state.showModal}>{this.state.modalContent}</Modal>
+        <div className="regions">{this.props.viewer.regions.map(this.getRegion)}</div>
       </div>
     );
   }
 }
 
+// <Modal onRequestClose={this.hideModal} isOpen={this.state.showModal}>{this.state.modalContent}</Modal>
+
 export default Relay.createContainer(Westeros, {
   fragments: {
-    regions: () => Relay.QL`
-      fragment on Regions {
-        list {
+    viewer: () => Relay.QL`
+      fragment on Viewer {
+        regions {
           ${Region.getFragment('region')}
         }
       }

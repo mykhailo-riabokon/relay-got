@@ -4,12 +4,7 @@ import RegionType from './Region.type'
 
 export default {
   type: new GraphQLList(RegionType),
-  args: {
-    id: {
-      type: GraphQLString
-    }
-  },
-  resolve(_, args, { rootValue }) {
-    return rootValue.regionService.getRegion(args);
+  resolve({}, {}, { rootValue }) {
+    return rootValue.regionService.getRegions();
   }
 }

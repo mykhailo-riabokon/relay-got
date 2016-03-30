@@ -1,7 +1,7 @@
 import React, {PropTypes, Component} from 'react';
-import Relay, {RootContainer, Route} from 'react-relay';
-import Family from './components/family/index.jsx';
-import {FamilyRoute} from 'core/routes.js';
+import Relay from 'react-relay';
+// import Family from './components/family/index.jsx';
+// import {FamilyRoute} from 'core/routes.js';
 import './region.less';
 
 export class Region extends Component {
@@ -14,11 +14,11 @@ export class Region extends Component {
   };
 
   showRegion = () => {
-    const route = new FamilyRoute({ regionId: this.props.region.id });
-
-    this.context.showModal(
-      <RootContainer route={route} Component={Family}/>
-    );
+    // const route = new FamilyRoute({ regionId: this.props.region.id });
+    //
+    // this.context.showModal(
+    //   <RootContainer route={route} Component={Family}/>
+    // );
   };
   get className() {
     let {name} = this.props.region || '';

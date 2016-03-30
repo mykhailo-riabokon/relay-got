@@ -1,9 +1,9 @@
 import regions from '../data/regions';
 
 const RegionService = {
-  getRegion({ id }) {
-    return id ? regions.toJS() : [];
+  getRegions() {
+    return regions.toJS();
   }
-}
+};
 
 export default RegionService;
