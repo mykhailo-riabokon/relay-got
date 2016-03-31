@@ -1,13 +1,13 @@
 import React, {Component, PropTypes} from 'react';
 import Relay from 'react-relay';
-import './family.less';
+import './index.less';
 
 export class Family extends Component {
   static propTypes = {
     family: PropTypes.object,
   };
 
-  get rullerFamily() {
+  get family() {
     const { name, words, coatOfArms } = this.props.family;
     const style = {
       backgroundImage: `url(${coatOfArms})`
@@ -29,11 +29,7 @@ export class Family extends Component {
   }
 
   render() {
-    return (
-      <div className="family-container">
-        {this.props.family && this.rullerFamily}
-      </div>
-    );
+    return this.props.family && this.family;
   }
 }
 

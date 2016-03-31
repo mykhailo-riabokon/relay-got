@@ -2,6 +2,7 @@ import React, { PropTypes, Component } from 'react';
 import Relay from 'react-relay';
 import ReactModal from 'react-modal';
 import Family from './components/Family';
+import './index.less';
 
 class Region extends Component {
   static propTypes = {
@@ -18,10 +19,10 @@ class Region extends Component {
 
   render() {
     const styles = {
-      overlay : {
+      overlay: {
         backgroundColor: 'rgba(0,0,0, 0.6)'
       },
-      content : {
+      content: {
         border: 'none',
         background: 'rgba(0,0,0, 0.9)'
       }
@@ -29,7 +30,9 @@ class Region extends Component {
 
     return (
       <ReactModal isOpen={true} onRequestClose={this.backToWesteros} style={styles}>
-        <Family family={this.props.viewer.family} />
+        <div className="region-container">
+          <Family family={this.props.viewer.family} />
+        </div>
       </ReactModal>
     );
   }
