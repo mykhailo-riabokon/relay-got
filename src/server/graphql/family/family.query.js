@@ -3,13 +3,15 @@ import {fromGlobalId} from 'graphql-relay';
 import FamilyType from './Family.type'
 
 export default {
-  type: new GraphQLList(FamilyType),
+  type: FamilyType,
   args: {
-    familyId: {
+    regionId: {
       type: GraphQLString
     }
   },
   resolve(_, args, { rootValue }) {
-    return rootValue.familyService.getFamilies(args);
+    const regionId = args.regionId ? fromGlobalId(args.regionId).id : null;
+
+    return rootValue.familyService.getFamily(regionId);
   }
 }

@@ -1,8 +1,15 @@
 import families from '../data/families';
 
 const FamilyService = {
-  getFamilies({ familyId }) {
-    return familyId ? families.toJS() : [];
+  getFamily(regionId) {
+    let result = null;
+
+    if (regionId) {
+      result = families.find(family => family.get('regionId') === regionId);
+      result = result && result.toJS();
+    }
+
+    return result;
   }
 }
 

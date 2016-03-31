@@ -31,6 +31,6 @@ import queries from './queries';
 
 export default (
   <Route path="/" component={Westeros} queries={queries}>
-    <Route path="family" component={Family} />
+    <Route path="family" component={Family} queryParams={['regionId']} queries={queries} />
   </Route>
 );

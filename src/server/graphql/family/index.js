@@ -1,7 +1,7 @@
-import families from './families.query';
+import family from './family.query';
 
 const queries = {
-  families,
+  family,
 };
 
 export default {
