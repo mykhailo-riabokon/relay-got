@@ -47,6 +47,7 @@ export class Westeros extends Component {
       <div className="westeros">
         <h1 className="header">Westeros</h1>
         <div className="regions">{this.props.viewer.regions.map(this.getRegion)}</div>
+        {this.props.children}
       </div>
     );
   }
