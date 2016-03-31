@@ -2,6 +2,7 @@ import React, { PropTypes, Component } from 'react';
 import Relay from 'react-relay';
 import ReactModal from 'react-modal';
 import Family from './components/Family';
+import Character from './components/Character';
 import './index.less';
 
 class Region extends Component {
@@ -32,6 +33,12 @@ class Region extends Component {
       <ReactModal isOpen={true} onRequestClose={this.backToWesteros} style={styles}>
         <div className="region-container">
           <Family family={this.props.viewer.family} />
+          <div className="characters-container">
+            <h2 className="character-header">Citizens</h2>
+            <div className="characters">
+              {this.props.viewer.characters.map((character, index) => <Character character={character} key={index} />)}
+            </div>
+          </div>
         </div>
       </ReactModal>
     );
@@ -47,9 +54,12 @@ export default Relay.createContainer(Region, {
     viewer: () => Relay.QL`
       fragment on Viewer {
         family(regionId: $regionId) {
-          ${Family.getFragment('family')}
-        }
-      }
-    `
-  }
+          ${Family.getFragment('family')},
+        },
+        characters(regionId: $regionId) {
+          ${Character.getFragment('character')},
+        },
+      },
+    `,
+  },
 });

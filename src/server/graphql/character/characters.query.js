@@ -10,6 +10,8 @@ export default {
     }
   },
   resolve(_, args, { rootValue }) {
-    return rootValue.characterService.getCharecters(args);
+    const regionId = args.regionId ? fromGlobalId(args.regionId).id : null;
+
+    return rootValue.characterService.getCharecters(regionId);
   }
 }

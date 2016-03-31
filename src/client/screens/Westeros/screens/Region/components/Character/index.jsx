@@ -1,6 +1,6 @@
 import React, {PropTypes, Component} from 'react';
 import Relay from 'react-relay';
-import ToggleCharacterMutation from './ToggleCharacterMutation.js';
+// import ToggleCharacterMutation from './ToggleCharacterMutation.js';
 import './character.less';
 
 export class Character extends Component {
@@ -11,18 +11,18 @@ export class Character extends Component {
   reviveCharacter = () => {
     const {id, isDead} = this.props.character;
 
-    Relay.Store.update(new ToggleCharacterMutation({
-      characterId: id,
-      kill: !isDead,
-      charactersId: this.props.charactersId
-    }), {
-      onFailure: (transaction) => {
-        throw new Error('Something went wrong')
-      },
-      onSuccess: (response) => {
-        console.log('Success');
-      }
-    })
+    // Relay.Store.update(new ToggleCharacterMutation({
+    //   characterId: id,
+    //   kill: !isDead,
+    //   charactersId: this.props.charactersId
+    // }), {
+    //   onFailure: (transaction) => {
+    //     throw new Error('Something went wrong')
+    //   },
+    //   onSuccess: (response) => {
+    //     console.log('Success');
+    //   }
+    // })
   };
 
   render() {
