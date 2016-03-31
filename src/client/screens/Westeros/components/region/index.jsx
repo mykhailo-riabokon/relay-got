@@ -13,7 +13,7 @@ export class Region extends Component {
 
   showRegion = () => {
     this.context.router.push({
-      pathname: '/family',
+      pathname: '/region',
       query: {
         regionId: this.props.region.id,
       },
