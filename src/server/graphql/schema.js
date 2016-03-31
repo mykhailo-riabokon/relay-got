@@ -1,7 +1,11 @@
+import { globalIdField } from 'graphql-relay';
 import {GraphQLSchema, GraphQLObjectType} from 'graphql';
-import viewer from './viewer';
+import { nodeInterface, registerNodeGetters } from './init';
+import queries from './queries';
 
-// import * as mutations from './mutations';
+const VIEWER_INSTANCE = { id: '' };
+const VIEWER_NAME = 'viewer';
+registerNodeGetters(VIEWER_NAME, () => VIEWER_INSTANCE);
 
 export default new GraphQLSchema({
   query: new GraphQLObjectType({
@@ -9,8 +13,16 @@ export default new GraphQLSchema({
     description: 'The root query for GOT example',
     fields: {
       viewer: {
-        type: viewer,
-        resolve: () => ({})
+        type: new GraphQLObjectType({
+          name: 'Viewer',
+          isTypeOf: (obj) => obj === VIEWER_INSTANCE,
+          fields: () => ({
+            id: globalIdField(VIEWER_NAME),
+            ...queries,
+          }),
+          interfaces: [nodeInterface],
+        }),
+        resolve: () => VIEWER_INSTANCE
       }
     },
   })
