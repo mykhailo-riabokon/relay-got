@@ -6,3 +6,4 @@ assets/*
 .DS_Store
 **/schema.graphql
 **/schema.json
+build
