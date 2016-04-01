@@ -71,17 +71,6 @@ export function getLoaders() {
   ];
 }
 
-export function getPreLoaders() {
-  return [
-    {
-      loader: "eslint-loader",
-      test: /(\.js$|\.jsx$)/,
-      exclude: /node_modules/,
-      include: [sourcePath],
-    }
-  ];
-}
-
 export function getPlugins() {
   let result = [
     new TransferWebpackPlugin([

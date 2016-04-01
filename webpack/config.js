@@ -9,7 +9,6 @@ const config = {
     publicPath: '/assets/js/'
   },
   module: {
-    preLoaders: helpers.getPreLoaders(),
     loaders: helpers.getLoaders(),
   },
   plugins: helpers.getPlugins(),
