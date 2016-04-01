@@ -36,7 +36,8 @@ class Region extends Component {
           <div className="characters-container">
             <h2 className="character-header">Citizens</h2>
             <div className="characters">
-              {this.props.viewer.characters.map((character, index) => <Character character={character} key={index} />)}
+              {this.props.viewer.characters.map((character, index) => <Character viewerId={this.props.viewer.id} character={character} key={index} />
+              )}
             </div>
           </div>
         </div>
@@ -53,6 +54,7 @@ export default Relay.createContainer(Region, {
   fragments: {
     viewer: () => Relay.QL`
       fragment on Viewer {
+        id,
         family(regionId: $regionId) {
           ${Family.getFragment('family')},
         },

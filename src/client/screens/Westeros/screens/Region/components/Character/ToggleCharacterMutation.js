@@ -1,4 +1,4 @@
-import Relay, {Mutation} from 'react-relay';
+import Relay, { Mutation } from 'react-relay';
 
 class ToggleCharacterMutation extends Mutation {
   getMutation() {
@@ -10,12 +10,9 @@ class ToggleCharacterMutation extends Mutation {
   }
 
   getVariables() {
-    const {kill, characterId} = this.props;
+    const { kill, characterId } = this.props;
 
-    return {
-      characterId,
-      kill
-    };
+    return { characterId, kill };
   }
 
   getConfigs() {
@@ -23,7 +20,7 @@ class ToggleCharacterMutation extends Mutation {
       {
         type: 'FIELDS_CHANGE',
         fieldIDs: {
-          characters: this.props.charactersId
+          viewer: this.props.viewerId
         }
       }
     ];
@@ -32,7 +29,7 @@ class ToggleCharacterMutation extends Mutation {
   getFatQuery() {
     return Relay.QL`
       fragment on ToggleCharacterPayload {
-        characters
+        viewer
       }
     `;
   }

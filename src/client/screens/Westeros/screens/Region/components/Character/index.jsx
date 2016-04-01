@@ -1,28 +1,32 @@
 import React, {PropTypes, Component} from 'react';
 import Relay from 'react-relay';
-// import ToggleCharacterMutation from './ToggleCharacterMutation.js';
-import './character.less';
+import ToggleCharacterMutation from './ToggleCharacterMutation.js';
+import './index.less';
 
 export class Character extends Component {
   static propTypes = {
-    character: PropTypes.object
+    character: PropTypes.object,
+    viewerId: PropTypes.string,
   };
 
-  reviveCharacter = () => {
-    const {id, isDead} = this.props.character;
+  toggleCharacter = () => {
+    const { id, isDead } = this.props.character;
 
-    // Relay.Store.update(new ToggleCharacterMutation({
-    //   characterId: id,
-    //   kill: !isDead,
-    //   charactersId: this.props.charactersId
-    // }), {
-    //   onFailure: (transaction) => {
-    //     throw new Error('Something went wrong')
-    //   },
-    //   onSuccess: (response) => {
-    //     console.log('Success');
-    //   }
-    // })
+    Relay.Store.commitUpdate(
+      new ToggleCharacterMutation({
+        characterId: id,
+        kill: !isDead,
+        viewerId: this.props.viewerId,
+      }),
+      {
+        onFailure: (transaction) => {
+          throw new Error('Something went wrong')
+        },
+        onSuccess: (response) => {
+          console.log('Success');
+        }
+      }
+    );
   };
 
   render() {
@@ -33,7 +37,7 @@ export class Character extends Component {
     const classes = `character ${isDead ? 'character--dead': ''}`;
 
     return (
-      <div className={classes} onClick={this.reviveCharacter}>
+      <div className={classes} onClick={this.toggleCharacter}>
         <div className="character__photo" style={style}></div>
         <div className="character__name">{name}</div>
       </div>

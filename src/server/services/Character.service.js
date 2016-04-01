@@ -13,10 +13,10 @@ const CharecterService = {
 
     return result;
   },
-  toggleCharacter(characterId, kill) {
+  toggleCharacter(id, kill) {
     const index = data.findIndex(item => item.get('id') === id);
     const character = data.get(index).set('isDead', kill);
-    
+
     data = data.set(index, character);
 
     return {};
