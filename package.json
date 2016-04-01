@@ -1,8 +1,9 @@
 {
   "name": "relay-got",
-  "version": "1.0.1",
-  "description": "Relay example in Game of Thrones subject",
-  "main": "index.js",
+  "private": true,
+  "version": "2.0.0",
+  "description": "react-relay + graphql example",
+  "main": "./build/server/index.js",
   "scripts": {
     "update-schema": "babel-node ./src/server/scripts/updateSchema.js",
     "build:client": "NODE_ENV=production babel-node ./webpack/index.js",
@@ -20,10 +21,12 @@
   "keywords": [
     "Javascript",
     "ES6",
+    "React",
     "Relay",
     "GraphQL",
-    "NodeJS",
-    "express"
+    "Nodejs",
+    "express",
+    "example"
   ],
   "author": "Mikhail Riabokon",
   "license": "UNLICENSED",
