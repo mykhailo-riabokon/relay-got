@@ -15,12 +15,9 @@ export default mutationWithClientMutationId({
     }
   },
   outputFields: () => ({ viewer }),
-  mutateAndGetPayload() {
-    // let {id} = fromGlobalId(characterId);
-    //
-    // // revive in list
-    // toggleCharacter(id, kill);
+  mutateAndGetPayload(args, { rootValue }) {
+    const { id } = fromGlobalId(args.characterId);
 
-    return {};
+    return rootValue.characterService.toggleCharacter(id, args.kill);
   }
 });

@@ -402,20 +402,3 @@ export default Immutable.fromJS([
     photo: '/assets/images/characters/ygritte-512x512.jpg'
   }
 ]);
-
-// let data = Immutable.fromJS(originData.toJS());
-//
-// export function getData() {
-//   return data.toJS();
-// }
-//
-// export function toggleCharacter(id, kill) {
-//   let index = data.findIndex(item => item.get('id') === id);
-//   let character = data.get(index);
-//
-//   character = character.set('isDead', kill);
-//
-//   data = data.set(index, character);
-//
-//   return data;
-// }
