@@ -1,6 +1,6 @@
-import React, {PropTypes, Component} from 'react';
+import React, { PropTypes, Component } from 'react';
 import Relay from 'react-relay';
-import './region.less';
+import './index.less';
 
 export class Region extends Component {
   static propTypes = {
@@ -43,6 +43,6 @@ export default Relay.createContainer(Region, {
         id,
         name
       }
-    `
-  }
+    `,
+  },
 });

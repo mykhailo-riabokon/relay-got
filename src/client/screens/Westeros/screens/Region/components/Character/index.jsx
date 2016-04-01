@@ -1,4 +1,4 @@
-import React, {PropTypes, Component} from 'react';
+import React, { PropTypes, Component } from 'react';
 import Relay from 'react-relay';
 import ToggleCharacterMutation from './ToggleCharacterMutation.js';
 import './index.less';
@@ -19,22 +19,23 @@ export class Character extends Component {
         viewerId: this.props.viewerId,
       }),
       {
-        onFailure: (transaction) => {
-          throw new Error('Something went wrong')
+        onFailure: () => {
+          throw new Error('Something went wrong');
         },
         onSuccess: (response) => {
-          console.log('Success');
-        }
+          /* eslint no-console: 0 */
+          console.log('Success', response);
+        },
       }
     );
   };
 
   render() {
-    const {name, photo, isDead} = this.props.character;
+    const { name, photo, isDead } = this.props.character;
     const style = {
-      backgroundImage: `url(${photo})`
+      backgroundImage: `url(${photo})`,
     };
-    const classes = `character ${isDead ? 'character--dead': ''}`;
+    const classes = `character ${isDead ? 'character--dead' : ''}`;
 
     return (
       <div className={classes} onClick={this.toggleCharacter}>
@@ -55,6 +56,6 @@ export default Relay.createContainer(Character, {
         title,
         photo
       }
-    `
-  }
+    `,
+  },
 });

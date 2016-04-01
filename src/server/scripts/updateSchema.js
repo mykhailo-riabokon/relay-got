@@ -1,3 +1,5 @@
+/* eslint no-console: 0 */
+
 import fs from 'fs';
 import path from 'path';
 import schema from '../graphql/schema';

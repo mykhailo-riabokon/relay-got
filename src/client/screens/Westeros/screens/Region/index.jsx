@@ -21,23 +21,27 @@ class Region extends Component {
   render() {
     const styles = {
       overlay: {
-        backgroundColor: 'rgba(0,0,0, 0.6)'
+        backgroundColor: 'rgba(0,0,0, 0.6)',
       },
       content: {
         border: 'none',
-        background: 'rgba(0,0,0, 0.9)'
-      }
+        background: 'rgba(0,0,0, 0.9)',
+      },
     };
+    const isOpen = true;
+
+    function renderCharacter(character, index) {
+      return <Character viewerId={this.props.viewer.id} character={character} key={index} />;
+    }
 
     return (
-      <ReactModal isOpen={true} onRequestClose={this.backToWesteros} style={styles}>
+      <ReactModal isOpen={isOpen} onRequestClose={this.backToWesteros} style={styles}>
         <div className="region-container">
           <Family family={this.props.viewer.family} />
           <div className="characters-container">
             <h2 className="character-header">Citizens</h2>
             <div className="characters">
-              {this.props.viewer.characters.map((character, index) => <Character viewerId={this.props.viewer.id} character={character} key={index} />
-              )}
+              {this.props.viewer.characters.map(renderCharacter)}
             </div>
           </div>
         </div>

@@ -1,16 +1,16 @@
-import React, {PropTypes, Component} from 'react';
+import React, { PropTypes, Component } from 'react';
 import Relay from 'react-relay';
 import Region from './components/Region';
-
 import './index.less';
 
 export class Westeros extends Component {
   static propTypes = {
-    viewer: PropTypes.object
+    viewer: PropTypes.object,
+    children: PropTypes.any,
   };
 
   getRegion(region, index) {
-    return <Region key={index} region={region}/>;
+    return <Region key={index} region={region} />;
   }
 
   render() {
@@ -32,6 +32,6 @@ export default Relay.createContainer(Westeros, {
           ${Region.getFragment('region')}
         }
       }
-    `
-  }
+    `,
+  },
 });

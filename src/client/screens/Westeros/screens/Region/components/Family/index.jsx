@@ -1,4 +1,4 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component, PropTypes } from 'react';
 import Relay from 'react-relay';
 import './index.less';
 
@@ -10,7 +10,7 @@ export class Family extends Component {
   get family() {
     const { name, words, coatOfArms } = this.props.family;
     const style = {
-      backgroundImage: `url(${coatOfArms})`
+      backgroundImage: `url(${coatOfArms})`,
     };
 
     return (
@@ -42,6 +42,6 @@ export default Relay.createContainer(Family, {
         words,
         coatOfArms
       }
-    `
-  }
+    `,
+  },
 });
