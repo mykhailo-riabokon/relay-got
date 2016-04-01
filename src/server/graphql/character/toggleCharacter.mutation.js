@@ -1,5 +1,5 @@
-import {GraphQLNonNull, GraphQLString, GraphQLBoolean} from 'graphql';
-import {mutationWithClientMutationId, fromGlobalId} from 'graphql-relay';
+import { GraphQLNonNull, GraphQLString, GraphQLBoolean } from 'graphql';
+import { mutationWithClientMutationId, fromGlobalId } from 'graphql-relay';
 import viewer from '../viewer';
 
 export default mutationWithClientMutationId({
@@ -7,17 +7,17 @@ export default mutationWithClientMutationId({
   inputFields: {
     kill: {
       type: new GraphQLNonNull(GraphQLBoolean),
-      description: 'Kill or not'
+      description: 'Kill or not',
     },
     characterId: {
       type: new GraphQLNonNull(GraphQLString),
-      description: 'Character id'
-    }
+      description: 'Character id',
+    },
   },
   outputFields: () => ({ viewer }),
   mutateAndGetPayload(args, { rootValue }) {
     const { id } = fromGlobalId(args.characterId);
 
     return rootValue.characterService.toggleCharacter(id, args.kill);
-  }
+  },
 });

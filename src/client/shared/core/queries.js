@@ -8,4 +8,4 @@ const viewer = () => Relay.QL`
 
 export default {
   viewer,
-}
+};

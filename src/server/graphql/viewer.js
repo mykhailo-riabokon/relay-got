@@ -17,5 +17,5 @@ export default {
     }),
     interfaces: () => [nodeInterface],
   }),
-  resolve: () => VIEWER_INSTANCE
+  resolve: () => VIEWER_INSTANCE,
 };

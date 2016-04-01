@@ -20,16 +20,16 @@ class ToggleCharacterMutation extends Mutation {
       {
         type: 'FIELDS_CHANGE',
         fieldIDs: {
-          viewer: this.props.viewerId
-        }
-      }
+          viewer: this.props.viewerId,
+        },
+      },
     ];
   }
 
   getFatQuery() {
     return Relay.QL`
       fragment on ToggleCharacterPayload {
-        viewer
+        viewer,
       }
     `;
   }

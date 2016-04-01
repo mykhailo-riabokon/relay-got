@@ -10,7 +10,7 @@ const FamilyService = {
     }
 
     return result;
-  }
-}
+  },
+};
 
 export default FamilyService;

@@ -6,4 +6,4 @@ export default {
   ...character.queries,
   ...family.queries,
   ...region.queries,
-}
+};

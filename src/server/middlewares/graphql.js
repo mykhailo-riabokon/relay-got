@@ -7,5 +7,5 @@ export default graphql({
   graphiql: true,
   rootValue: {
     ...services,
-  }
+  },
 });

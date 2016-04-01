@@ -1,8 +1,7 @@
 import express from 'express';
-import path from 'path';
 import graphql from './middlewares/graphql';
 import initialPage from './middlewares/initialPage';
-import {port, __HOT__} from '../../config.js'
+import { port, __HOT__ } from '../../config.js';
 
 const app = express();
 
@@ -19,5 +18,7 @@ app.use('/assets', express.static('assets'));
 app.get('*', initialPage());
 
 app.listen(port, () => {
+  /* eslint no-console: 0 */
+
   console.info(`Server started at http://localhost:${port}`);
 });

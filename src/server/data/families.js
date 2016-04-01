@@ -7,7 +7,7 @@ export default Immutable.fromJS([
     name: 'Stark',
     regionId: '1_region',
     words: 'Winter is Coming',
-    coatOfArms: '/assets/images/coatOfArms/House-Stark-heraldry.jpg'
+    coatOfArms: '/assets/images/coatOfArms/House-Stark-heraldry.jpg',
   },
   {
     id: '2_family',
@@ -15,7 +15,7 @@ export default Immutable.fromJS([
     name: 'Arryn',
     regionId: '2_region',
     words: 'As High as Honor',
-    coatOfArms: '/assets/images/coatOfArms/House-Arryn-heraldry.jpg'
+    coatOfArms: '/assets/images/coatOfArms/House-Arryn-heraldry.jpg',
   },
   {
     id: '3_family',
@@ -23,7 +23,7 @@ export default Immutable.fromJS([
     name: 'Tully',
     regionId: '3_region',
     words: 'Family, Duty, Honor',
-    coatOfArms: '/assets/images/coatOfArms/House-Tully-heraldry.jpg'
+    coatOfArms: '/assets/images/coatOfArms/House-Tully-heraldry.jpg',
   },
   {
     id: '4_family',
@@ -31,7 +31,7 @@ export default Immutable.fromJS([
     name: 'Lannister',
     regionId: '4_region',
     words: 'A Lannister Always Pays His Debts',
-    coatOfArms: '/assets/images/coatOfArms/House-Lannister-heraldry.jpg'
+    coatOfArms: '/assets/images/coatOfArms/House-Lannister-heraldry.jpg',
   },
   {
     id: '5_family',
@@ -39,7 +39,7 @@ export default Immutable.fromJS([
     name: 'Greyjoy',
     regionId: '5_region',
     words: 'We Do Not Sow',
-    coatOfArms: '/assets/images/coatOfArms/House-Greyjoy-heraldry.jpg'
+    coatOfArms: '/assets/images/coatOfArms/House-Greyjoy-heraldry.jpg',
   },
   {
     id: '6_family',
@@ -47,6 +47,6 @@ export default Immutable.fromJS([
     name: 'Baratheon',
     regionId: '7_region',
     words: 'Ours is the Fury',
-    coatOfArms: '/assets/images/coatOfArms/Baratheon_sig.png'
-  }
+    coatOfArms: '/assets/images/coatOfArms/Baratheon_sig.png',
+  },
 ]);

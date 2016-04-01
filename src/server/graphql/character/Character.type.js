@@ -1,43 +1,22 @@
-import {
-  GraphQLList,
-  GraphQLID,
-  GraphQLObjectType,
-  GraphQLString,
-  GraphQLBoolean,
-  GraphQLNonNull
-} from 'graphql';
+import { GraphQLObjectType, GraphQLString, GraphQLBoolean } from 'graphql';
 import { globalIdField } from 'graphql-relay';
-// import {nodeInterface} from '../graphqlRelay.js';
 
 export default new GraphQLObjectType({
   name: 'Character',
-  description: 'character from GOT',
-  // isTypeOf: (obj) => {
-  //   let {type} = obj;
-  //
-  //   if (type && type.toLocaleLowerCase) {
-  //     type = type.toLocaleLowerCase();
-  //   }
-  //
-  //   return type  === 'character';
-  // },
+  description: 'Character from GOT world',
   fields: () => ({
     id: globalIdField('Character'),
-    // familyId: globalIdField('Family', (obj) => obj.familyId),
-    // regionId: globalIdField('Region', (obj) => obj.regionId),
     name: {
-      type: GraphQLString
+      type: GraphQLString,
     },
     isDead: {
-      type: GraphQLBoolean
+      type: GraphQLBoolean,
     },
     title: {
-      type: GraphQLString
+      type: GraphQLString,
     },
     photo: {
-      type: GraphQLString
-    }
-  })
-  // ,
-  // interfaces: [nodeInterface]
+      type: GraphQLString,
+    },
+  }),
 });

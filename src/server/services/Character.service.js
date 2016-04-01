@@ -20,7 +20,7 @@ const CharecterService = {
     data = data.set(index, character);
 
     return {};
-  }
+  },
 };
 
 export default CharecterService;
