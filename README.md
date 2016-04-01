@@ -1,14 +1,15 @@
-# Relay + GraphQL example 
+# Relay + GraphQL example
 
-This example shows how to fetch and mutate data via react-relay on client and graphql-relay on server.
-Data was taken from Game of Thrones world.
+This is an [example](http://relay-got.herokuapp.com/) of react-relay + graphql usage. Data was taken from Game of Thrones world.
 
 [Presentation (Ru) ](https://www.youtube.com/watch?v=CePdnxcnnCA)
 
-# Notes
-[Example](http://relay-got.herokuapp.com/) is **not** cross platform. I chacked it only in latest Chrome.
-## DEVELOPMENT for WINDOWS users
-In case if you want to change some code, and see result locally, do not forget to change set environment variables, and npm scripts format. 
+## Development (MacOSX)
+* ```npm install```
+* ```npm run dev```
+
+## Notes
+[Example](http://relay-got.herokuapp.com/) is **not** cross browser.
 
 Useful links:
 * [Relay](https://facebook.github.io/relay/)
