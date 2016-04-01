@@ -29,10 +29,13 @@ class Region extends Component {
       },
     };
     const isOpen = true;
-
-    function renderCharacter(character, index) {
-      return <Character viewerId={this.props.viewer.id} character={character} key={index} />;
-    }
+    const renderCharacter = (character, index) => (
+      <Character
+        viewerId={this.props.viewer.id}
+        character={character}
+        key={index}
+      />
+    );
 
     return (
       <ReactModal isOpen={isOpen} onRequestClose={this.backToWesteros} style={styles}>

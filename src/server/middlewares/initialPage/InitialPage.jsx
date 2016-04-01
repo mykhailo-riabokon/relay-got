@@ -10,7 +10,9 @@ function InitialPage() {
 
   return (
     <html>
-      <head></head>
+      <head>
+        <title>Relay GOT example</title>
+      </head>
       <body>
         <div id="app"></div>
         <script src={path}></script>

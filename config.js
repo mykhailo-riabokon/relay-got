@@ -1,10 +1,10 @@
 const path = require('path');
 
 const sourcePath = path.resolve(__dirname, 'src');
-const distAssetsPath = path.join(__dirname, 'build');
+const distAssetsPath = path.join(__dirname, 'assets');
 
 module.exports.__PRODUCTION__ = (process.env.NODE_ENV === 'production');
-module.exports.clientOutputPath = path.join(distAssetsPath, 'assets', 'js');
+module.exports.clientOutputPath = path.join(distAssetsPath, 'js');
 module.exports.__DEVELOPMENT__ = (process.env.NODE_ENV === 'development');
 module.exports.clientSourcePath = path.join(sourcePath, 'client');
 module.exports.srcAssetsPath = path.join(sourcePath, 'assets');
