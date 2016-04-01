@@ -1,33 +1,27 @@
-/**
- * Created by mikhail on 02.11.15.
- */
-import React, {PropTypes, Component} from 'react';
-import Relay, {RootContainer, Route} from 'react-relay';
-import Family from './components/family/index.jsx';
-import {FamilyRoute} from 'core/routes.js';
-
-require('./region.less');
+import React, { PropTypes, Component } from 'react';
+import Relay from 'react-relay';
+import './index.less';
 
 export class Region extends Component {
   static propTypes = {
-    region: PropTypes.object
+    region: PropTypes.object,
   };
-  static contextTypes = {
-    showModal: PropTypes.func
-  };
-  showRegion = () => {
-    let route = new FamilyRoute({
-      regionId: this.props.region.id
-    });
 
-    this.context.showModal(
-      <RootContainer
-        route={route}
-        Component={Family}/>
-    );
+  static contextTypes = {
+    router: PropTypes.object,
   };
+
+  showRegion = () => {
+    this.context.router.push({
+      pathname: '/region',
+      query: {
+        regionId: this.props.region.id,
+      },
+    });
+  };
+
   get className() {
-    let {name} = this.props.region || '';
+    let { name } = this.props.region;
 
     name = name.replace(/\W/g, '');
 
@@ -49,6 +43,6 @@ export default Relay.createContainer(Region, {
         id,
         name
       }
-    `
-  }
+    `,
+  },
 });

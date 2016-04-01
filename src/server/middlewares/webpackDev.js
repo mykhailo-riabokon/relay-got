@@ -1,9 +1,6 @@
-/**
- * Created by mikhail on 26.10.15.
- */
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpack from 'webpack';
-import config from '../../../scripts/webpack/config.js';
+import config from '../../../webpack/config.js';
 
 const compiler = webpack(config);
 
@@ -11,8 +8,8 @@ export default webpackDevMiddleware(compiler, {
   noInfo: true,
   publicPath: config.output.publicPath,
   stats: {
-    colors: true
-  }
+    colors: true,
+  },
 });
 
 // for commonjs import reason;

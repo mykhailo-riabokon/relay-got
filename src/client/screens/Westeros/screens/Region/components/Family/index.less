@@ -1,0 +1,33 @@
+@family-height: 500px;
+@family-width: 350px;
+
+@family__crest-height: @family-width;
+@family__crest-width: @family__crest-height;
+
+.family {
+  width: @family-width;
+  height: @family-height;
+  color: #ffffff;
+  text-align: center;
+  .family__coat-of-arms {
+    width: @family__crest-width;
+    height: @family__crest-height;
+    background-color: #000;
+    background-size: cover;
+  }
+  .info {
+    display: flex;
+    margin: 20px 0;
+    font-size: 1em;
+    justify-content: flex-start;
+    align-content: center;
+    .label {
+      width: 100px;
+      text-align: left;
+    }
+    .value {
+      width: 250px;
+      text-align: right;
+    }
+  }
+}

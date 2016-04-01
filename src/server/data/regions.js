@@ -1,7 +1,6 @@
-/**
- * Created by mikhail on 14.11.15.
- */
-export default [
+import Immutable from 'immutable';
+
+export default Immutable.fromJS([
   {
     id: '1_region',
     type: 'region',
@@ -9,7 +8,7 @@ export default [
     rulers: 'House Stark',
     capital: 'Winterfell',
     religion: 'The Old Gods of the Forest',
-    bastardSurname: 'Snow'
+    bastardSurname: 'Snow',
   },
   {
     id: '2_region',
@@ -18,7 +17,7 @@ export default [
     rulers: 'House Arryn',
     capital: 'The Eyrie',
     religion: 'The Faith of the Seven',
-    bastardSurname: 'Stone'
+    bastardSurname: 'Stone',
   },
   {
     id: '3_region',
@@ -27,7 +26,7 @@ export default [
     rulers: 'House Tully',
     capital: 'Riverrun',
     religion: null,
-    bastardSurname: 'Rivers'
+    bastardSurname: 'Rivers',
   },
   {
     id: '4_region',
@@ -36,7 +35,7 @@ export default [
     rulers: 'House Lannister',
     capital: 'Casterly Rock',
     religion: 'The Faith of the Seven',
-    bastardSurname: 'Hill'
+    bastardSurname: 'Hill',
   },
   {
     id: '5_region',
@@ -45,7 +44,7 @@ export default [
     rulers: 'House Greyjoy',
     capital: 'Pyke',
     religion: 'The Drowned God',
-    bastardSurname: 'Pyke'
+    bastardSurname: 'Pyke',
   },
   {
     id: '6_region',
@@ -54,7 +53,7 @@ export default [
     rulers: 'The King on the Iron Throne',
     capital: 'King\'s Landing',
     religion: 'Faith of the Seven',
-    bastardSurname: 'Waters'
+    bastardSurname: 'Waters',
   },
   {
     id: '7_region',
@@ -63,7 +62,7 @@ export default [
     rulers: 'House Baratheon',
     capital: 'Storm\'s End',
     religion: 'The Faith of the Seven',
-    bastardSurname: 'Storm'
+    bastardSurname: 'Storm',
   },
   {
     id: '8_region',
@@ -72,7 +71,7 @@ export default [
     rulers: 'House Tyrell',
     capital: 'Highgarden',
     religion: 'The Faith of the Seven',
-    bastardSurname: 'Flowers'
+    bastardSurname: 'Flowers',
   },
   {
     id: '9_region',
@@ -81,7 +80,7 @@ export default [
     rulers: 'House Martell',
     capital: 'Sunspear',
     religion: 'The Faith of the Seven',
-    bastardSurname: 'Sand'
+    bastardSurname: 'Sand',
   },
   {
     id: '10_region',
@@ -90,6 +89,6 @@ export default [
     rulers: 'King-Beyond-the-Wall',
     capital: null,
     religion: 'The Old Gods of the Forest',
-    bastardSurname: 'Sand'
-  }
-];
+    bastardSurname: 'Sand',
+  },
+]);
