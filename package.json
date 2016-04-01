@@ -12,6 +12,7 @@
     "dev": "npm run update-schema && HOT=1 NODE_ENV=development npm run dev:server & npm run eslint:watch",
     "eslint": "eslint --ext .js,.jsx ./src/**",
     "eslint:watch": "esw -w --ext .js,.jsx ./src/**",
+    "postinstall": "npm run update-schema && npm run build:client && npm run build:server",
     "start": "node ./build/server/index.js"
   },
   "repository": {
