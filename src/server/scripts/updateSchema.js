@@ -1,10 +1,10 @@
 import fs from 'fs';
 import path from 'path';
-import schema from '../src/server/graphql/schema.js';
-import {graphql} from 'graphql';
-import {introspectionQuery, printSchema} from 'graphql/utilities';
+import schema from '../graphql/schema';
+import { graphql } from 'graphql';
+import { introspectionQuery, printSchema } from 'graphql/utilities';
 
-const graphQlPath = path.join(__dirname, '../src/server/graphql');
+const graphQlPath = path.join(__dirname, '../graphql');
 
 console.log('Start update schema');
 

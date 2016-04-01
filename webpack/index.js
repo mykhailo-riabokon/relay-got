@@ -1,6 +1,3 @@
-/**
- * Created by mikhail on 26.10.15.
- */
 import webpack from 'webpack';
 import config from './config.js';
 

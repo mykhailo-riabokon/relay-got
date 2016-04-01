@@ -1,7 +1,7 @@
 import express from 'express';
 import graphql from './middlewares/graphql';
 import initialPage from './middlewares/initialPage';
-import { port, __HOT__ } from '../../config.js';
+import { port, __HOT__ } from '../../config';
 
 const app = express();
 

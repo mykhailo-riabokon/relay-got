@@ -1,6 +1,3 @@
-/**
- * Created by mikhail on 26.10.15.
- */
 function notifyError(error) {
   // BELLs when something goes wrong!
   console.log("\x07" + error);
@@ -10,7 +7,7 @@ function notifyWarning(warning) {
   console.log(warning);
 }
 
-export function notify(stats) {
+export default function notify(stats) {
   let json = stats.toJson();
 
   if (json.errors.length > 0) {
@@ -24,4 +21,3 @@ export function notify(stats) {
     }));
   }
 }
-

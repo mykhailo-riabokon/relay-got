@@ -1,5 +1,5 @@
 import React from 'react';
-import {__DEVELOPMENT__, port} from '../../../../config.js';
+import {__DEVELOPMENT__, port} from '../../../../config';
 
 function InitialPage() {
   let path = '/assets/js/app.js';

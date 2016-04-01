@@ -1,10 +1,10 @@
-import {isProduction, jsOutputPath} from '../../config.js';
+import { __PRODUCTION__, clientOutputPath } from '../config.js';
 import * as helpers from './helpers.js';
 
-let config = {
+const config = {
   entry: helpers.getEntries(),
   output: {
-    path: jsOutputPath,
+    path: clientOutputPath,
     filename: 'app.js',
     publicPath: '/assets/js/'
   },
@@ -21,7 +21,7 @@ let config = {
   }
 };
 
-if (!isProduction) {
+if (!__PRODUCTION__) {
   config.devtool = 'eval-source-map';
 }
 

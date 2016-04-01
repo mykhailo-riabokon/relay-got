@@ -4,12 +4,12 @@
   "description": "Relay example in Game of Thrones subject",
   "main": "index.js",
   "scripts": {
-    "update-schema": "babel-node ./scripts/updateSchema.js",
-    "webpack": "babel-node ./scripts/webpack/index.js",
+    "update-schema": "babel-node ./src/server/scripts/updateSchema.js",
+    "build:client": "NODE_ENV=production  babel-node ./webpack/index.js",
     "dev:server": "nodemon --exec babel-node ./index.js",
     "dev": "npm run update-schema && HOT=1 NODE_ENV=development npm run dev:server",
-    "eslint": "eslint --ext .js, .jsx ./src/",
-    "eslint:watch": "esw -w --ext .js, .jsx ./src/",
+    "eslint": "eslint --ext .js,.jsx ./src/**",
+    "eslint:watch": "esw -w --ext .js,.jsx ./src/**",
     "start": "NODE_ENV=production node ./index.js"
   },
   "repository": {

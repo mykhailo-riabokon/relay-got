@@ -6,8 +6,8 @@ import {
   __DEVELOPMENT__,
   __PRODUCTION__,
   __HOT__
-} from '../../config.js';
-import {notify} from './plugins.js';
+} from '../config.js';
+import { notify } from './plugins';
 import webpack from 'webpack';
 import TransferWebpackPlugin from 'transfer-webpack-plugin';
 import CleanWebpackPlugin from 'clean-webpack-plugin';
@@ -30,7 +30,7 @@ export function getBabelConfig() {
   const config = {
     passPerPreset: true,
     plugins: [
-      path.join(__dirname, 'babelRelayPlugin.js')
+      path.join(__dirname, 'plugins', 'babelRelayPlugin.js')
     ],
     presets: [
       'react',

@@ -1,12 +1,15 @@
-import path from 'path';
+const path = require('path');
 
-export const port = process.env.PORT || 3000;
-export const isProduction = (process.env.NODE_ENV === 'production');
-export const __PRODUCTION__ = isProduction;
-export const __DEVELOPMENT__ = !isProduction;
-export const __HOT__ = Boolean(process.env.HOT);
-export const sourcePath = path.resolve(__dirname, 'src');
-export const srcAssetsPath = path.join(sourcePath, 'assets');
-export const distAssetsPath = path.join(__dirname, 'assets');
-export const clientSourcePath = path.join(sourcePath, 'client');
-export const jsOutputPath = path.join(distAssetsPath, 'js');
+const sourcePath = path.resolve(__dirname, 'src');
+const distAssetsPath = path.join(__dirname, 'build');
+
+module.exports.__PRODUCTION__ = (process.env.NODE_ENV === 'production');
+module.exports.clientOutputPath = path.join(distAssetsPath, 'client', 'js');
+module.exports.serverOutputPath = path.join(distAssetsPath, 'server', 'js');
+module.exports.__DEVELOPMENT__ = (process.env.NODE_ENV === 'development');
+module.exports.clientSourcePath = path.join(sourcePath, 'client');
+module.exports.srcAssetsPath = path.join(sourcePath, 'assets');
+module.exports.__HOT__ = Boolean(process.env.HOT);
+module.exports.distAssetsPath = distAssetsPath;
+module.exports.port = process.env.PORT || 3000;
+module.exports.sourcePath = sourcePath;
