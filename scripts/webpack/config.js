@@ -1,6 +1,3 @@
-/**
- * Created by mikhail on 26.10.15.
- */
 import {isProduction, jsOutputPath} from '../../config.js';
 import * as helpers from './helpers.js';
 
@@ -12,6 +9,7 @@ let config = {
     publicPath: '/assets/js/'
   },
   module: {
+    preLoaders: helpers.getPreLoaders(),
     loaders: helpers.getLoaders(),
   },
   plugins: helpers.getPlugins(),

@@ -1,8 +1,6 @@
-/**
- * Created by mikhail on 26.10.15.
- */
 import path from 'path';
 import {
+  sourcePath,
   clientSourcePath,
   distAssetsPath,
   __DEVELOPMENT__,
@@ -29,36 +27,6 @@ export function getEntries() {
 }
 
 export function getBabelConfig() {
-  // const result = [
-  //   {
-  //     query: {
-  //       presets: [
-  //         'es2015',
-  //         'stage-0',
-  //         'react',
-  //       ],
-  //       plugins: [
-  //         path.join(__dirname, 'babelRelayPlugin.js'),
-  //       ],
-  //     },
-  //   },
-  // ];
-  //
-  // if (__HOT__) {
-  //   result[0].query.plugins.push('react-transform');
-  //   result[0].query.extra = {
-  //     "react-transform": {
-  //       "transforms": [{
-  //         "transform": "react-transform-hmr",
-  //         "imports": ["react"],
-  //         "locals": ["module"]
-  //       }]
-  //     }
-  //   };
-  // }
-  //
-  // return result;
-
   const config = {
     passPerPreset: true,
     plugins: [
@@ -99,6 +67,17 @@ export function getLoaders() {
     {
       test: /\.(png|jpg|ttf)$/,
       loader: 'url-loader?limit=8192'
+    }
+  ];
+}
+
+export function getPreLoaders() {
+  return [
+    {
+      loader: "eslint-loader",
+      test: /(\.js$|\.jsx$)/,
+      exclude: /node_modules/,
+      include: [sourcePath],
     }
   ];
 }
