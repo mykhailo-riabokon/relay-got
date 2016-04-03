@@ -3,7 +3,7 @@ import Relay from 'react-relay';
 import Region from './components/Region';
 import './index.less';
 
-export class Westeros extends Component {
+class Westeros extends Component {
   static propTypes = {
     viewer: PropTypes.object,
     children: PropTypes.any,
